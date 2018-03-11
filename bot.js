@@ -1232,3 +1232,5 @@ client.on('message', message => {
       "\n" + "**" + args + "**")
   }
   });
+
+  client.on("guildBanAdd", (guild, user)=>console.log(user));
