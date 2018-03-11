@@ -158,12 +158,6 @@ client.on('message', message => {
 }
 });
 
-
-client.on('guildCreate', guild => {
- guild.defaultChannel.send(`**Kinggy Kong, appears in ${guild.name}**`);
-});
-
-
 client.on('message', message => {
 if (message.content === prefix + 'help') {
          let embed = new Discord.RichEmbed()
@@ -924,19 +918,16 @@ const zead = [
 });
 
 
-
-  
 client.on('message', message => {
-  if (true) {
-if (message.content === prefix + 'invite') {
-  let embed = new Discord.RichEmbed ()
-  .setAuthor(`${message.author.avatarURL}`)
-  .setDescription(":arrow_right: Invite KingBot!")
-  .setURL("**https://bytetechproject.rf.gd/invite**")
-  .setFooter("KingBot™",`${client.user.avatarURL}`)
-  message.channel.sendEmbed(embed)  
-;}}});
-
+  if(message.content === prefix + "invite") {
+    let embed = new Discord.RichEmbed ()
+    .setAuthor(`${client.user.avatarURL}`)
+    .setDescription(":arrow_right: Invite KingBot!")
+    .setURL("**https://bytetechproject.rf.gd/invite**")
+    .setFooter("KingBot™",client.user.avatarURL)
+   message.channel.sendEmbed(embed) 
+  }
+});
 
   client.on('message' , message => {
 
