@@ -202,7 +202,7 @@ if (message.content === prefix + 'help') {
 	 .addField("**:diamond_shape_with_a_dot_inside: Support ™ **","** **")
 	 .addField("**موقع البوت للدعم**","**http://bytetechproject.rf.gd/**")
 	 .addField("**موقع دعوة البوت**","**http://bytetechproject.rf.gd/invite**")
-	 .addField("**لو تبي ترسل لنا رساله **","**.contact رسالتك**")
+	 .addField("**لو تبي ترسل لنا رساله **","**.contact <رسالتك>**")
       .addField("** مبرمجين البوت :wrench: **","** ByteTech™ » <@171259176029257728> <@343383616895713290> <@315477177028050945> <@336606008069849088> **")
        .setColor('RANDOM')
   message.author.sendEmbed(embed);
