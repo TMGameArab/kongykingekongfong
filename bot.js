@@ -930,10 +930,10 @@ client.on('message', message => {
   if (true) {
 if (message.content === prefix + 'invite') {
   let embed = new Discord.RichEmbed ()
-  .setAuthor(`${client.user.avatarURL}`)
+  .setAuthor(`${message.author.avatarURL}`)
   .setDescription(":arrow_right: Invite KingBot!")
   .setURL("**https://bytetechproject.rf.gd/invite**")
-  .setFooter("KingBot™",client.user.avatarURL)
+  .setFooter("KingBot™",`${client.user.avatarURL}`)
   message.channel.sendEmbed(embed)  
 ;}}});
 
