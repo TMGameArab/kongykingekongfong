@@ -1304,7 +1304,6 @@ let embed = new Discord.RichEmbed()
 
 
 
-
  var args = message.content.split(" ").slice(1);    
           if(message.content.startsWith(prefix + 'id')) {
        var year = message.author.createdAt.getFullYear()
@@ -1336,8 +1335,7 @@ let args = message.content.split(' ').slice(1).join(' ');
     var w = 'بوت';
   }else {
     var w = 'عضو';
-  }
- let embed = new Discord.RichEmbed()
+  } let embed = new Discord.RichEmbed()
       .setColor("#502faf")
     .addField(':trident:| اسمك:',`**<@` + `${z.id}` + `>**`, true)
     .addField(':shield:| ايدي:', "**"+ `${z.id}` +"**",true)
@@ -1357,8 +1355,8 @@ let args = message.content.split(' ').slice(1).join(' ');
               if (!message) return message.reply('**ضع المينشان بشكل صحيح  :x: **').catch(console.error);
 
 }
-  
 });
+
 
 
 
