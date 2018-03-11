@@ -1211,7 +1211,6 @@ client.users.get("171259176029257728").send(
 
 let embed = new Discord.RichEmbed()
 .setDescription(':mailbox_with_mail: تم إرسال الرسالة')
-.setThumbnail(message.author.avatarURL)
 .setFooter(message.author.username, message.author.avatarURL)
 message.channel.sendEmbed(embed);
 
@@ -1236,3 +1235,6 @@ client.on('message', message => {
 
 
   
+client.on('guildBanAdd', (guild, user) => {
+guild.defaultChannel.send(`${user.username}#${user.tag} has been banned perm`)
+});
