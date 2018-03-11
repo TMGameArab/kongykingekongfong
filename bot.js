@@ -1063,9 +1063,7 @@ client.on('guildMemberAdd', member => {
         .addField(':id: | user :', "**[" + `${member.id}` + "]**" )
                 .addField('➡| انت العضو رقم',`${member.guild.memberCount}`)
                
-                  .addField("Name:",`<@` + `${member.id}` + `>`, true)
-    
-                  
+     
 
                                      .addField(' الـسيرفر', `${member.guild.name}`,true)
                                        
