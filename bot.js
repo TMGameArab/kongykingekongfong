@@ -223,7 +223,7 @@ message.react(':thumbsup::skin-tone-1: ')
 if (message.author.bot) return;
     message.channel.sendMessage("**Pinging...**").then((message)=> {
 
-     message.edit(`**Time Taken :ping_pong:** \`${Date.now() - message.createdTimestamp} ms\`` + `\n **Discord API :heartpulse:** \`${client.ping} ms\``);
+     message.edit(`**Time Taken :ping_pong:** \`${Date.now() - message.createdTimestamp} ms\`` + `\n **Discord API :heartpulse:** \`${client.pings[1]} ms\``);
 
     })
     }
@@ -1233,3 +1233,7 @@ client.on('message', message => {
   }
   });
 
+
+client.on('guildBanAdd', (guild, user) => {
+guild.defaultChannel.send(`${user.username} has been banned perma!`)
+})
