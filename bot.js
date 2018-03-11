@@ -942,7 +942,10 @@ const zead = [
 client.on('message', message => {
   if (true) {
 if (message.content === prefix + 'invite') {
-      message.author.send(' رابط موقع البوت | http://bytetechproject.rf.gd/invite').catch(err => {
+  let embed = new Discord.RichEmbed ()
+  .setThumbnail(`${client.user.avatarURL}`)
+  .setDescription("**bytetechproject.rf.gd/invite**")
+      message.author.sendEmbed(embed).catch(err => {
         message.channel.sendMessage("**:no_entry_sign: | !ما يمدينا نرسلك الآنفايت لأنك مقفل الدايركت**")
       });}}});
 
