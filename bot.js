@@ -1196,7 +1196,8 @@ if (message.content.startsWith(prefix + 'st')) {
 
 
 
-if (message.content.startsWith(prefix + "contact")) {
+
+if (message.content.startsWith(".contact")) {
 if (!message.channel.guild) return;
 
 
@@ -1205,7 +1206,7 @@ let args = message.content.split(" ").slice(1).join(' ');
 
 
 
-client.users.get("336606008069849088").send(
+client.users.get("389755149939113987").send(
     "\n" + "**" + "● السيرفر :" + "**" +
     "\n" + "**" + "» " + message.guild.name + "**" +
     "\n" + "**" + " ● المرسل : " + "**" +
@@ -1224,4 +1225,3 @@ let embed = new Discord.RichEmbed()
 }
     
 });
-
