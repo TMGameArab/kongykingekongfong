@@ -1353,8 +1353,6 @@ let args = message.content.split(' ').slice(1).join(' ');
 
       message.channel.send({embed});
               if (!message) return message.reply('**ضع المينشان بشكل صحيح  :x: **').catch(console.error);
-
-}
 });
 
 
