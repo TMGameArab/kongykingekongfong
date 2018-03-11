@@ -1263,7 +1263,7 @@ client.on('message', message => {
   if(message.content === prefix + "إقتراح") {
     if(message.author.bot) return;
    
-    let args1 = message.content.split(' ').slice(1).join(' ')
+    let args1 = message.content.split(' ').slice(1).join(' ');
 
     let embed = new Discord.RichEmbed ()
     .addField("الأسم:", message.author.username)
