@@ -7,10 +7,16 @@
     "start": "node bot.js"
   },
   "dependencies": {
+    "canvas": "git://github.com/elspoono/node-canvas-heroku.git",
     "discord.js": "^11.3.2",
+    "fs": "0.0.1-security",
     "request": "2.81.0",
     "simple-youtube-api": "^5.0.1",
+    "snekfetch": "^4.0.0-beta.0",
     "youtube-node": "^1.3.2",
     "ytdl-core": "^0.20.2"
+  },
+  "devDependencies": {
+    "canvas": "~0.8.1"
   }
 }
