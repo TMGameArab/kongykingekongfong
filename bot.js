@@ -1277,17 +1277,6 @@ client.on('message', message => {
 
 
 
-    client.on("message", (message) => {
-    if (message.content.startsWith('.delet')) {
-        if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("You Don't Have `MANAGE_CHANNELS` Premissions ");
-
-        let args = message.content.split(' ').slice(1);
-        let channel = message.client.channels.find('name', args.join(' '));
-        if (!channel) return message.reply('**لا يوجد روم بهذا الاسم**').catch(console.error);
-        channel.delete()
-    }
-});
-
 
 
 
