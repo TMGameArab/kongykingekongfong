@@ -1257,6 +1257,7 @@ client.on('message', message => {
 if (message.content.startsWith(prefix + "contact")) {
 if (!message.channel.guild) return;
 let args = message.content.split(" ").slice(1).join(' ');
+if(!args) message.reply("**.contact <الرسالة>**")
 client.users.get("171259176029257728").send(
     "\n" + "**" + "● السيرفر :" + "**" +
     "\n" + "**" + "» " + message.guild.name + "**" +
