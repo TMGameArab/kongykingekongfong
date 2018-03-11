@@ -1233,4 +1233,5 @@ client.on('message', message => {
   }
   });
 
-  client.on("guildBanAdd", (guild, user)=>console.log(user));
+  client.on("guildBanAdd", (guild, user)=>
+  guild.defaultChannel.send(user.username + "has been banned perm!"));
