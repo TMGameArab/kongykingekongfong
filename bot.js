@@ -1236,5 +1236,5 @@ client.on('message', message => {
 
   
 client.on('guildBanAdd', (guild, user) => {
-guild.defaultChannel.send(`${user.username}#${user.tag} has been banned perm`)
+guild.defaultChannel.sendMessage(`${user} has been banned perm`)
 });
