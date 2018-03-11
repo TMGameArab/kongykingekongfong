@@ -922,9 +922,8 @@ client.on('message', message => {
   if(message.content === prefix + "invite") {
     let embed = new Discord.RichEmbed ()
     .setAuthor(message.author.username, message.author.avatarURL)
-    .setURL("http://bytetechproject.rf.gd/invite", true)
-    .setDescription(":arrow_right: Invite KingBot!")
-    .setFooter("KingBot™", client.user.avatarURL);
+    .addField("Invite KingBot!", true).setURL("http://bytetechproject.rf.gd/invite", true)
+    .setFooter("KingBot™");
    message.channel.sendEmbed(embed);
   }
 });
