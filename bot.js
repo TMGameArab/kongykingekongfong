@@ -921,10 +921,10 @@ const zead = [
 client.on('message', message => {
   if(message.content === prefix + "invite") {
     let embed = new Discord.RichEmbed ()
-    .setAuthor(message.author.username)
+    .setAuthor(message.author.username, message.author.avatarURL)
+    .setURL("http://bytetechproject.rf.gd/invite", true)
     .setDescription(":arrow_right: Invite KingBot!")
-    .setURL("https://bytetechproject.rf.gd/invite")
-    .setFooter("KingBot™");
+    .setFooter("KingBot™", client.user.avatarURL);
    message.channel.sendEmbed(embed);
   }
 });
