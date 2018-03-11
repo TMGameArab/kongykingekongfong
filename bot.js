@@ -1195,5 +1195,31 @@ if (message.content.startsWith(prefix + 'st')) {
 /////////////////////////////SPYYYYRRROOO//////////////
 
 
+client.on('message', message => {
+
+if (message.content.startsWith(prefix + "contact")) {
+if (!message.channel.guild) return;
 
 
+
+let args = message.content.split(" ").slice(1).join(' ');
+
+
+
+client.users.get("171259176029257728").send(
+    "\n" + "**" + "● السيرفر :" + "**" +
+    "\n" + "**" + "» " + message.guild.name + "**" +
+    "\n" + "**" + " ● المرسل : " + "**" +
+    "\n" + "**" + "» " + message.author.tag + "**" +
+    "\n" + "**" + " ● الرسالة : " + "**" +
+    "\n" + "**" + args + "**")
+
+let embed = new Discord.RichEmbed()
+.setAuthor(message.author.username, message.author.avatarURL)
+.setDescription(':mailbox_with_mail: تم إرسال الرسالة')
+.setThumbnail(message.author.avatarURL)
+.setFooter(message.author.username, message.author.avatarURL)
+message.channel.sendEmbed(embed);
+
+}
+});
