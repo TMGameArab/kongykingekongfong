@@ -209,6 +209,7 @@ if (message.content === prefix + 'help') {
 	 .addField("**:diamond_shape_with_a_dot_inside: Support ™ **","** **")
 	 .addField("**موقع البوت للدعم**","**http://bytetechproject.rf.gd/**")
 	 .addField("**موقع دعوة البوت**","**http://bytetechproject.rf.gd/invite**")
+	 .addField("**لو تبي ترسل لنا رساله **","**.contact رسالتك**")
       .addField("** مبرمجين البوت :wrench: **","** ByteTech™ » <@171259176029257728> <@343383616895713290> <@315477177028050945> <@336606008069849088> **")
        .setColor('RANDOM')
   message.author.sendEmbed(embed);
@@ -1207,15 +1208,16 @@ let args = message.content.split(" ").slice(1).join(' ');
 
 
 client.users.get("171259176029257728").send(
-  "\n" + "" + "● السيرفر :" + "" +
-  "\n" + "**" + "» " + message.guild.name + "**" +
-  "\n" + "" + " ● المرسل : " + "" +
-  "\n" + "**" + "» " + message.author.tag + "**" +
-  "\n" + "" + " ● الرسالة : " + "" +
-  "\n" + "**" + args + "**")
+    "\n" + "**" + "● السيرفر :" + "**" +
+    "\n" + "**" + "» " + message.guild.name + "**" +
+    "\n" + "**" + " ● المرسل : " + "**" +
+    "\n" + "**" + "» " + message.author.tag + "**" +
+    "\n" + "**" + " ● الرسالة : " + "**" +
+    "\n" + "**" + args + "**")
 
 let embed = new Discord.RichEmbed()
 .setDescription(':mailbox_with_mail: تم إرسال الرسالة')
+.setThumbnail(message.author.avatarURL)
 .setFooter(message.author.username, message.author.avatarURL)
 message.channel.sendEmbed(embed);
 
@@ -1235,13 +1237,21 @@ client.on('message', message => {
   
   
   client.users.get("336606008069849088").send(
-      "\n" + "" + "● السيرفر :" + "" +
+      "\n" + "**" + "● السيرفر :" + "**" +
       "\n" + "**" + "» " + message.guild.name + "**" +
-      "\n" + "" + " ● المرسل : " + "" +
+      "\n" + "**" + " ● المرسل : " + "**" +
       "\n" + "**" + "» " + message.author.tag + "**" +
-      "\n" + "" + " ● الرسالة : " + "" +
+      "\n" + "**" + " ● الرسالة : " + "**" +
       "\n" + "**" + args + "**")
+  
+  let embed = new Discord.RichEmbed()
+  .setDescription(':mailbox_with_mail: تم إرسال الرسالة')
+  .setThumbnail(message.author.avatarURL)
+  .setFooter(message.author.username, message.author.avatarURL)
+  message.channel.sendEmbed(embed);
+  
   }
   });
 
 
+  
