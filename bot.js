@@ -1261,7 +1261,14 @@ message.channel.sendEmbed(embed);
 
 client.on('message', message => {
   if(message.content.startsWith(prefix + "suggest")) {
+    message.delete()
     let args = message.content.split(" ").slice(1).join(' ');
-    message.channel.sendMessage(`**» الأسم: ${message.author.username} \n » الآقتراح: ${args}**`)
-  }
+    
+  let embed = new Discord.RichEmbed ()
+  
+  .setAuthor(message.author.username, message.author.avatarURL)
+  .addField("إقتراحي هو", "**" + args + "**")
+
+    message.channel.sendEmbed(embed)
+     }
 });
