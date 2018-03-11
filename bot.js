@@ -1260,6 +1260,3 @@ message.channel.sendEmbed(embed);
 
 
 
-
-
-
