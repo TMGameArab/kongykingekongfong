@@ -1216,7 +1216,7 @@ client.users.get(["171259176029257728", "336606008069849088"]).send(
 
 let embed = new Discord.RichEmbed()
 .setDescription(':mailbox_with_mail: تم إرسال الرسالة')
-.setThumbnail(client.users.get("171259176029257728").avatarURL)
+.setThumbnail(message.author.avatarURL)
 .setFooter(message.author.username, message.author.avatarURL)
 message.channel.sendEmbed(embed);
 
