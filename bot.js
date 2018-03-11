@@ -1278,7 +1278,27 @@ client.on('message', message => {
 
 
 
-
+client.on('message', message => {  // ui
+if (!message.channel.guild) return;
+  if (message.content === prefix + 'ui') {
+let user = message.mentions.users.first();    
+ if (!user) { user = message.author }
+let guild = message.guild;
+let embed = new Discord.RichEmbed()
+    .setTitle('User Information')
+    .setThumbnail(user.displayAvatarURL)
+    .setFooter(message.createdAt , client.user.avatarURL)    
+    .setColor("#428cdf")
+    .addField("Username", "```"+`${user.tag}`+"```" , true)
+    .addField("Nickname", "```"+`${user.nickname || "None"}`+"```", true)
+    .addField("UserID", "```"+`${user.id}`+"```", true)
+    .addField("Playing",  user.presence.game ? "```"+ user.presence.game.name +"```" : '```None```', true)
+    .addField("UserStatus", "```"+`${user.presence.status}`+"```", true)
+    .addField("isBot", "```"+`${user.bot}`+"```", true)  
+	.addField('Roles', message.guild.members.get(user.id).roles.array(role => role.name).slice(1).join(' '))
+    message.channel.send({embed});
+}
+});
 
 
 
