@@ -230,7 +230,6 @@ if (message.content === prefix + 'help') {
 client.on('message', message => {
 if (message.content.startsWith(prefix + 'ping')) {
            if(!message.channel.guild) return;
-message.react('👍')
 if (message.author.bot) return;
     message.channel.sendMessage("**Pinging...**").then((message)=> {
 
@@ -1090,9 +1089,35 @@ client.on('guildMemberAdd', member => {
                    
     });
 
-    client.on('message', message => {
-      if(message.content === prefix + "clear") message.reply("**Use `مسح.` instead!**")
-    });
+
+
+
+//english -> arabic
+client.on("message", message => {
+ 
+  var args = message.content.substring(prefix.length).split(" ");
+  if (message.content.startsWith(prefix + "clear")) {
+if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('⚠ | **لا يوجد لديك صلاحية لمسح الشات**');
+var msg;
+msg = parseInt();
+
+message.channel.fetchMessages({limit: msg}).then(messages => message.channel.bulkDelete(messages)).catch(console.error);
+message.channel.sendMessage("", {embed: {
+title: "Whoaaaaaaaa!",
+color: 0x06DF00,
+description: "Messages have gone to :wastebasket:",
+footer: {
+text: "This message will be deleted in 3 seconds!"
+}
+}}).then(msg => {msg.delete(3000)});}
+
+
+});
+
+
+  cliet.on
+
+
 /////////////////////////////////////////////
 ////////////////////////////////////////////
 /////////////////////////////////////////////
