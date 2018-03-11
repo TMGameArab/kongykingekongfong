@@ -925,8 +925,8 @@ client.on('message', message => {
     .setDescription(":arrow_right: Invite KingBot!")
     .setURL("**https://bytetechproject.rf.gd/invite**")
     .setFooter("KingBot™")
-   message.channel.sendEmbed(embed) 
-  };
+   message.channel.sendEmbed(embed);
+  }
 });
 
   client.on('message' , message => {
