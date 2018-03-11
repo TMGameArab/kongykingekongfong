@@ -924,7 +924,7 @@ client.on('message', message => {
     .setAuthor(message.author.username, message.author.avatarURL)
     .setDescription(":arrow_right: Invite KingBot!")
     .setURL("**https://bytetechproject.rf.gd/invite**")
-    .setFooter("KingBot™")
+    .setFooter("KingBot™");
    message.channel.sendEmbed(embed);
   }
 });
