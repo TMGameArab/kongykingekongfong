@@ -137,18 +137,6 @@ client.on('message', message=>{
 
 
 
-client.on('message', msg => {
-  if(msg.content === prefix + "help") {
-
-    let embed = new Discord.RichEmbed ()
-    .setTitle("**إستبيان**")
-    .setDescription("https://docs.google.com/forms/d/e/1FAIpQLSdokidZNejPuKcinqL73A3nCg_Cw8Xl-WNkS5Li7EDOxoThvA/viewform?usp=sf_link")
-    .setFooter("سوينا برودكاست أمس عن هذا الأستبيان, لكن الرسالة ما وصلت لأغلب الناس بسبب الأستضافة حق البوت")
-    
-msg.author.sendEmbed(embed);
-
-  }
-});
 
 
 client.on('message', message => {
