@@ -930,12 +930,12 @@ client.on('message', message => {
   if (true) {
 if (message.content === prefix + 'invite') {
   let embed = new Discord.RichEmbed ()
-  .setThumbnail(`${client.user.avatarURL}`)
-  .setDescription("**https://bytetechproject.rf.gd/invite**")
-  .addField("** **" , "**ByteTech™**")
-      message.author.sendEmbed(embed).catch(err => {
-        message.channel.sendMessage("**:no_entry_sign: | !ما يمدينا نرسلك الآنفايت لأنك مقفل الدايركت**")
-      });}}});
+  .setAuthor(`${client.user.avatarURL}`)
+  .setDescription(":arrow_right: Invite KingBot!")
+  .setURL("**https://bytetechproject.rf.gd/invite**")
+  .setFooter("KingBot™",client.user.avatarURL)
+  message.channel.sendEmbed(embed)  
+;}}});
 
 
   client.on('message' , message => {
