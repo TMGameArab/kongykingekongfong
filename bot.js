@@ -1269,6 +1269,7 @@ client.on('message', message => {
   .setAuthor(message.author.username, message.author.avatarURL)
   .addField("إقتراحي هو", "**" + args + "**")
 
+  if(!args) return message.reply("**Please prodive a suggest**");
     message.channel.sendEmbed(embed)
      }
 });
