@@ -922,7 +922,7 @@ client.on('message', message => {
   if(message.content === prefix + "invite") {
     let embed = new Discord.RichEmbed ()
     .setAuthor(message.author.username, message.author.avatarURL)
-    .addField("Invite KingBot!", true).setURL("http://bytetechproject.rf.gd/invite", true)
+    .addField("Invite KingBot!").setURL("http://bytetechproject.rf.gd/invite")
     .setFooter("KingBot™");
    message.channel.sendEmbed(embed);
   }
