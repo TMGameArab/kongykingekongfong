@@ -1233,8 +1233,3 @@ client.on('message', message => {
   }
   });
 
-
-  
-client.on('guildBanAdd', guild => {
-guild.defaultChannel.sendMessage(`${guild.member.name} has been banned perm`)
-});
