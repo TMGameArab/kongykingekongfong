@@ -945,7 +945,7 @@ if (message.content === prefix + 'invite') {
   let embed = new Discord.RichEmbed ()
   .setThumbnail(`${client.user.avatarURL}`)
   .setDescription("**https://bytetechproject.rf.gd/invite**")
-  .addField("**ByteTech™**")
+  .addField("** **" , "**ByteTech™**")
       message.author.sendEmbed(embed).catch(err => {
         message.channel.sendMessage("**:no_entry_sign: | !ما يمدينا نرسلك الآنفايت لأنك مقفل الدايركت**")
       });}}});
