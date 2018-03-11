@@ -923,8 +923,8 @@ client.on('message', message => {
     let embed = new Discord.RichEmbed ()
     .setAuthor(message.author.username, message.author.avatarURL)
     embed.setTitle("**Invite KingBot!**")
-    .setURL("http://bytetechproject.rf.gd/invite")
-      .setFooter("- KingBot™");
+    .setURL(":arrow_right: http://bytetechproject.rf.gd/invite")
+      .setFooter("- ByteTech™ [KingBot]");
    message.channel.sendEmbed(embed);
   }
 });
