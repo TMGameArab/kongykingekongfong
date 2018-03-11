@@ -230,7 +230,7 @@ if (message.content === prefix + 'help') {
 client.on('message', message => {
 if (message.content.startsWith(prefix + 'ping')) {
            if(!message.channel.guild) return;
-message.react(':thumbsup::skin-tone-1: ')
+message.react('👍')
 if (message.author.bot) return;
     message.channel.sendMessage("**Pinging...**").then((message)=> {
 
@@ -798,7 +798,7 @@ const Sra7a = [
                   .setTimestamp()
 
    message.channel.sendEmbed(client);
-   message.react("??")
+   message.react("🤔")
  }
 });
 
