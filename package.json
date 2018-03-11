@@ -7,7 +7,7 @@
     "start": "node bot.js"
   },
   "dependencies": {
-    "canvas": "git://github.com/elspoono/node-canvas-heroku.git",
+    "canvas": "^1.6.9",
     "discord.js": "^11.3.2",
     "fs": "0.0.1-security",
     "request": "2.81.0",
@@ -17,6 +17,5 @@
     "ytdl-core": "^0.20.2"
   },
   "devDependencies": {
-    "canvas": "~0.8.1"
   }
 }
