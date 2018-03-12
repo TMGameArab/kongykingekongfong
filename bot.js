@@ -120,13 +120,14 @@ client.on('message', message => {
 client.on('message', message => {
  if (message.content === prefix + 'help') {
          let embed = new Discord.RichEmbed()
-.setThumbnail("http://markinternational.info/data/out/595/224155594-imagenes-de-apple.jpg")    
+.setThumbnail("https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/music-128.png")    
       .addField("**:musical_note:  اوامر الميوزك**","** **")
       .addField("**.play :musical_note: **","**لـ تشغيل لاغنيه**")
       .addField("**.vol :musical_note:**","**لرفع صوت لاغنيه**")
       .addField("**.stop :musical_note:**","**لـ اطفاء لاغنيه**")
       .addField("**.search :musical_note:**","**لـ عرض قائمه لاغاني**")
       .addField("**.skip :musical_note:**","**لـ نخطي لاغنيه**")
+      .setFooter("** ❇نبرى ذمتنا ❇: في أي أستعمال خاطئ للهذا الكوماند**")
 .setColor('RANDOM')
   message.author.sendEmbed(embed);
     }
@@ -1019,10 +1020,7 @@ client.on('guildMemberAdd', member => {
         .addField(':loudspeaker: |  نورت السيرفر يا قلبي' , `Welcome to the server, ${member}`)
         .addField(':id: | user :', "**[" + `${member.id}` + "]**" )
                 .addField('➡| انت العضو رقم',`${member.guild.memberCount}`)
-               
-     
-
-                                     .addField(' الـسيرفر', `${member.guild.name}`,true)
+          .addField(' الـسيرفر', `${member.guild.name}`,true)
                                        
      .setFooter(`${member.guild.name}`)
         .setTimestamp()
