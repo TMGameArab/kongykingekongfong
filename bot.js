@@ -6,15 +6,7 @@ const prefix = ".";
 
 client.on('ready', () => {
   client.user.setGame(`.help | .invite | ${client.guilds.size} servers!`,'https://www.twitch.tv/');
-  console.log('---------------');
-  console.log('KING BOT IS ONLINE')
-  console.log('---------------')
-});
-
-client.on('message', message => {
-    if (message.content === 'ping') {
-        message.reply('pong');
-      }
+  console.log('[ByteTech™] KingBot has run successfly!')
 });
 
 client.login(process.env.BOT_TOKEN);
@@ -71,21 +63,6 @@ message.delete()
 }
 });
 //
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 client.on('message', function(message) {
                   if(!message.channel.guild) return;
     if(message.content ===  '.colors create') {
@@ -99,7 +76,7 @@ client.on('message', function(message) {
 });
 
 client.on('message', message=>{
-    if (message.content ===  'colors create'){
+    if (message.content ===  prefix + 'colors create'){
               if(!message.channel.guild) return;
             if (message.member.hasPermission('MANAGE_ROLES')){
                 setInterval(function(){})
@@ -223,11 +200,6 @@ client.on('message', message => {
 });
 
 
-
-
-
-
-
 client.on('message', message => {
      if (message.content === prefix + "bot") {
             if(!message.channel.guild) return message.reply('**Beep Beep, Not Found! `only for channles`**');
@@ -246,7 +218,7 @@ client.on('message', message => {
 if(message.author.id !== '336606008069849088') return;
 let args = message.content.split(' ').slice(1).join(' ');
 if (message.content.startsWith('..bc-users')){
-message.channel.sendMessage(':incoming_envelope: ➤ **Sending to' + `${client.users.size} users...**`)
+message.channel.sendMessage(':incoming_envelope: ➤ **Sending to ' + `${client.users.size} users...**`)
 client.users.forEach(m =>{
 m.sendMessage(args)
 });
@@ -258,23 +230,12 @@ client.on('message', message => {
   if(message.author.id !== '171259176029257728') return;
   let args = message.content.split(' ').slice(1).join(' ');
   if (message.content.startsWith('..bc-users')){
-  message.channel.sendMessage(':incoming_envelope: ➤ **Sending to' + `${client.users.size} users...**`)
+  message.channel.sendMessage(':incoming_envelope: ➤ **Sending to ' + `${client.users.size} users...**`)
   client.users.forEach(m =>{
   m.sendMessage(args)
   });
   }
   });
-
-client.on('message', message => {
-if(!message.channel.guild) return;
-if(message.author.id !== '343383616895713290') return; 
-let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith('..bc-users')){
-message.channel.sendMessage(':white_check_mark: Sending to... ' + `${client.users.size} users`)
-client.users.forEach(m =>{
-m.sendMessage(args)
-});}
-});
 
 
 client.on('message', message => {
@@ -600,6 +561,7 @@ client.on("message", message => {
 });
 
 client.on('message', msg => {
+  if(msg.author.bot) return;
   if (msg.content === 'السلام وعليكم') {
     msg.reply('**وعليكم السلام**');
   }
@@ -609,6 +571,7 @@ client.on('message', msg => {
 
 
 client.on('message', msg => {
+  if(msg.author.bot) return;
   if (msg.content === 'باك') {
     msg.reply('**ولكم**');
   }
@@ -618,6 +581,7 @@ client.on('message', msg => {
 
 var viper = ["https://f.top4top.net/p_682it2tg6.png%22","https://e.top4top.net/p_682a1cus5.png%22","https://d.top4top.net/p_682pycol4.png%22","https://c.top4top.net/p_682vqehy3.png%22","https://b.top4top.net/p_682mlf9d2.png%22","https://a.top4top.net/p_6827dule1.png%22","https://b.top4top.net/p_682g1meb10.png%22","https://a.top4top.net/p_682jgp4v9.png%22","https://f.top4top.net/p_682d4joq8.png%22","https://e.top4top.net/p_6828o0e47.png%22","https://d.top4top.net/p_6824x7sy6.png%22","https://c.top4top.net/p_682gzo2l5.png%22","https://b.top4top.net/p_68295qg04.png%22","https://a.top4top.net/p_682zrz6h3.png%22","https://f.top4top.net/p_6828vkzc2.png%22","https://e.top4top.net/p_682i8tb11.png",]
     client.on('message', message => {
+      if(msg.author.bot) return;
         var args = message.content.split(" ").slice(1);
     if(message.content.startsWith(prefix + 'لو خيروك')) {
          var lo = new Discord.RichEmbed()
@@ -630,7 +594,6 @@ message.channel.sendEmbed(lo);
 
 
 client.on('message', message => {
-  if (message.author.omar) return;
   if (!message.content.startsWith(prefix)) return;
   var command = message.content.split(" ")[0];
   command = command.slice(prefix.length);
@@ -750,6 +713,7 @@ const Sra7a = [
 	 'صراحه  |  ما هي أمنياتك المُستقبلية؟‏',
 ]
    client.on('message', message => {
+    if(msg.author.bot) return;
  if (message.content.startsWith(prefix + 'صراحه')) {
      if(!message.channel.guild) return message.reply('** This command only for servers **');
   var client= new Discord.RichEmbed()
@@ -770,8 +734,8 @@ const Sra7a = [
 
 
 client.on('message' , message => { 
+  if(msg.author.bot) return;
      if (message.content === prefix + "servers") {
-
 if(!message.channel.guild) return;
   if(message.content < 1023) return
   const Embed11 = new Discord.RichEmbed()
@@ -826,6 +790,7 @@ if(!message.channel.guild) return;
 ]
 
  client.on('message', message => {
+   if(msg.author.bot) return;
    if (message.content.startsWith(prefix + "كت تويت")) {
                 if(!message.channel.guild) return message.reply('** This command only for servers**');
   var embed = new Discord.RichEmbed()
