@@ -62,34 +62,14 @@ client.on('message', message => {
 
 
 ///Anti-Advertising
-
 client.on('message', message => {
   if(message.content.includes("discord.gg")){
 if (!message.member.hasPermissions('ADMINISTRATOR')){
 message.delete()
- return message.reply(`** Not allowed to advertising Here :angry: ! **`).then(message => message.delete(5000));
+ return message.reply(`** You aren't allowed to advertise here! :angry: ! **`).then(message => message.delete(5000));
  }
 }
 });
-
-client.on('message', message => {
-  if(message.content.includes("http://")){
-if (!message.member.hasPermissions(['ADMINISTRATOR'])){
-message.delete()
- return message.reply(`** Not allowed to advertising Here :angry: ! **`).then(message => message.delete(5000));
- }
-}
-});
-
-client.on('message', message => {
-  if(message.content.includes("https://")){
-if (!message.member.hasPermissions(['ADMINISTRATOR'])){
-message.delete()
- return message.reply(`** Not allowed to advertising Here :angry: ! **`).then(message => message.delete(5000));
- }
-}
-});
-
 //
 
 
@@ -1320,7 +1300,8 @@ const music = new Music(client, {
   thumbnailType: "medium",
   enableQueueStat: true,
   leaveCmd: 'stop',      // Sets the name for the 'leave' command.
-  disableLoop: true        // Disable the loop command.
+  disableLoop: true,        // Disable the loop command.
+  streamMode: '1',
 });
 
 
