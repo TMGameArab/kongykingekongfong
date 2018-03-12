@@ -1304,6 +1304,7 @@ const music = new Music(client, {
   disableLoop: false,
   ownerOverMember: true,
   searchCmd: 'search',
+  inlineEmbeds: true,
   botOwner: '171259176029257728',        // Disable the loop command.
   streamMode: '0',
 });
