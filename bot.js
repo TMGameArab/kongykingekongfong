@@ -1464,7 +1464,7 @@ function playMusic(id, message) {
     voiceChannel = message.member.voiceChannel;
     var server = servers [message.guild.id];
     voiceChannel.join().then(function(connectoin) {
-        let stream = ytdl(servre.queue[0] + 'https://www.youtube.com/watch?v=' + id, {
+        let stream = ytdl(`${servre.queue[0]} https://www.youtube.com/watch?v=` + id, {
             filter: 'audioonly'
         });
         skipReq = 0;
