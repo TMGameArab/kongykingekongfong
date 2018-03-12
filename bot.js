@@ -1256,7 +1256,7 @@ const music = new Music(client, {
   clearInvoker: false,      // If permissions applicable, allow the bot to delete the messages that invoke it.
   playCmd: 'play',        // Sets the name for the 'play' command.
   volumeCmd: 'vol',     // Sets the name for the 'volume' command.
-  thumbnailType: 'medium',
+  thumbnailType: 'high',
   leaveCmd: 'stop',      // Sets the name for the 'leave' command.
   anyoneCanSkip: false,
   disableLoop: false,
