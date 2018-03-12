@@ -522,6 +522,7 @@ message.channel.sendEmbed(cat);
 
 client.on("message", (message) => {
 if (message.content.startsWith(prefix + "ct")) {
+        if (!args) message.reply("**.ct <آسم الشنل>");
             if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("**⚠ |`[MANAGE_CHANNELS]` لا يوجد لديك صلاحية للبان**");
         let args = message.content.split(" ").slice(1);
     message.guild.createChannel(args.join(' '), 'text');
@@ -534,6 +535,7 @@ message.channel.sendMessage('تـم إنـشاء روم كـتابـي')
 
 client.on("message", (message) => {
 if (message.content.startsWith(prefix + "cv")) {
+            if (!args) message.reply("**.cv <آسم الشنل>");
             if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("**⚠ |`[MANAGE_CHANNELS]` لا يوجد لديك صلاحية للبان**");
         let args = message.content.split(" ").slice(1);
     message.guild.createChannel(args.join(' '), 'voice');
