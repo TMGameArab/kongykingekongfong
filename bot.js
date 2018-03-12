@@ -1245,7 +1245,10 @@ let embed = new Discord.RichEmbed()
 // M U S I C  -   CODEES //////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
-
+client.on('message', message => {
+  if(message.contet === prefix + "play") {
+  message.channel.sendMessage("**Not happy with results? or It's not the song!** \n USE: `.search`");
+}});
 
 const music = new Music(client, {
   prefix: ".", // Prefix for the commands.
@@ -1266,12 +1269,6 @@ const music = new Music(client, {
   botOwner: '171259176029257728',        // Disable the loop command.
   streamMode: '0',
 });
-
-
-client.on('message', message => {
-  if(message.contet === prefix + "play") {
-  message.channel.sendMessage("**Not happy with results? or It's not the song!** \n USE: `.search`");
-}});
 
 ///////////////////////////////////////////////////////////////////////
 // M U S I C  -   CODEES //////////////////////////////////////////
