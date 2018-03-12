@@ -6,7 +6,6 @@ const prefix = ".";
 
 client.on('ready', () => {
   client.user.setGame(`.help | .invite | ${client.guilds.size} servers!`,'https://www.twitch.tv/');
-  console.log('[ByteTech™] KingBot has run successfly!');
 });
 
 client.login(process.env.BOT_TOKEN);
@@ -1253,7 +1252,7 @@ const music = new Music(client, {
   youtubeKey: 'AIzaSyApvbcgvYRGulf1I1Ffjfhr2K-S6TX0e9w',
   global: true,            // Non-server-specific queues.
   maxQueueSize: 25,        // Maximum queue size of 25.
-  clearInvoker: true,      // If permissions applicable, allow the bot to delete the messages that invoke it.
+  clearInvoker: false,      // If permissions applicable, allow the bot to delete the messages that invoke it.
   playCmd: 'play',        // Sets the name for the 'play' command.
   volumeCmd: 'vol',     // Sets the name for the 'volume' command.
   thumbnailType: 'medium',
