@@ -561,7 +561,6 @@ client.on("message", message => {
 });
 
 client.on('message', msg => {
-  if(msg.author.bot) return;
   if (msg.content === 'السلام وعليكم') {
     msg.reply('**وعليكم السلام**');
   }
@@ -571,7 +570,6 @@ client.on('message', msg => {
 
 
 client.on('message', msg => {
-  if(msg.author.bot) return;
   if (msg.content === 'باك') {
     msg.reply('**ولكم**');
   }
@@ -581,7 +579,6 @@ client.on('message', msg => {
 
 var viper = ["https://f.top4top.net/p_682it2tg6.png%22","https://e.top4top.net/p_682a1cus5.png%22","https://d.top4top.net/p_682pycol4.png%22","https://c.top4top.net/p_682vqehy3.png%22","https://b.top4top.net/p_682mlf9d2.png%22","https://a.top4top.net/p_6827dule1.png%22","https://b.top4top.net/p_682g1meb10.png%22","https://a.top4top.net/p_682jgp4v9.png%22","https://f.top4top.net/p_682d4joq8.png%22","https://e.top4top.net/p_6828o0e47.png%22","https://d.top4top.net/p_6824x7sy6.png%22","https://c.top4top.net/p_682gzo2l5.png%22","https://b.top4top.net/p_68295qg04.png%22","https://a.top4top.net/p_682zrz6h3.png%22","https://f.top4top.net/p_6828vkzc2.png%22","https://e.top4top.net/p_682i8tb11.png",]
     client.on('message', message => {
-      if(msg.author.bot) return;
         var args = message.content.split(" ").slice(1);
     if(message.content.startsWith(prefix + 'لو خيروك')) {
          var lo = new Discord.RichEmbed()
@@ -713,7 +710,6 @@ const Sra7a = [
 	 'صراحه  |  ما هي أمنياتك المُستقبلية؟‏',
 ]
    client.on('message', message => {
-    if(msg.author.bot) return;
  if (message.content.startsWith(prefix + 'صراحه')) {
      if(!message.channel.guild) return message.reply('** This command only for servers **');
   var client= new Discord.RichEmbed()
@@ -734,7 +730,6 @@ const Sra7a = [
 
 
 client.on('message' , message => { 
-  if(msg.author.bot) return;
      if (message.content === prefix + "servers") {
 if(!message.channel.guild) return;
   if(message.content < 1023) return
@@ -790,7 +785,6 @@ if(!message.channel.guild) return;
 ]
 
  client.on('message', message => {
-   if(msg.author.bot) return;
    if (message.content.startsWith(prefix + "كت تويت")) {
                 if(!message.channel.guild) return message.reply('** This command only for servers**');
   var embed = new Discord.RichEmbed()
