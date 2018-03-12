@@ -1252,14 +1252,13 @@ const music = new Music(client, {
   prefix: ".", // Prefix for the commands.
   youtubeKey: 'AIzaSyApvbcgvYRGulf1I1Ffjfhr2K-S6TX0e9w',
   global: true,            // Non-server-specific queues.
-  maxQueueSize: 25,        // Maximum queue size of 25.
+  maxQueueSize: 50,        // Maximum queue size of 25.
   clearInvoker: false,      // If permissions applicable, allow the bot to delete the messages that invoke it.
   playCmd: 'play',        // Sets the name for the 'play' command.
   volumeCmd: 'vol',     // Sets the name for the 'volume' command.
   thumbnailType: 'medium',
-  enableQueueStat: true,
   leaveCmd: 'stop',      // Sets the name for the 'leave' command.
-  anyoneCanSkip: true,
+  anyoneCanSkip: false,
   disableLoop: false,
   ownerOverMember: true,
   searchCmd: 'search',
