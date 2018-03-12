@@ -1269,9 +1269,9 @@ const music = new Music(client, {
 
 
 client.on('message', message => {
-  if(message.contet === prefix + "play")
-  message.channel.sendMessage("**Not happy with results? or It's not the song!** \n USE: `.search`")
-})
+  if(message.contet === prefix + "play") {
+  message.channel.sendMessage("**Not happy with results? or It's not the song!** \n USE: `.search`");
+}});
 
 ///////////////////////////////////////////////////////////////////////
 // M U S I C  -   CODEES //////////////////////////////////////////
