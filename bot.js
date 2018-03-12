@@ -7,7 +7,7 @@ const getYoutubeID = require('get-youtube-id');
 const fetchVideoInfo = require('youtube-info');
 const yt_api_key = "AIzaSyApvbcgvYRGulf1I1Ffjfhr2K-S6TX0e9w";
 const prefix = ".";
-var servers = [];
+var servers = {};
 var queue = [];
 var guilds = [];
 var queueNames = [];
@@ -1317,8 +1317,11 @@ let embed = new Discord.RichEmbed()
 
 
 
+///////////////////////////////////////////////////////////////////////
+// M U S I C  -   CODEES //////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
 
-////-- Commands, -////
 client.on('ready', () => {});
 var download = function(uri, filename, callback) {
     request.head(uri, function(err, res, body) {
@@ -1331,6 +1334,7 @@ var download = function(uri, filename, callback) {
 
 client.on('message', function(message) {
     const member = message.member;
+    var server = servers [message.guild.id];
     const mess = message.content.toLowerCase();
     const args = message.content.split(' ').slice(1).join(' ');
 
@@ -1356,7 +1360,7 @@ client.on('message', function(message) {
                           ${videoInfo.title}
                           **`)
                         .setColor("#a637f9")
-                        .setFooter('|| ' + message.author.tag)
+                        .setFooter('Requsted by » ' + message.author.tag)
                         .setThumbnail(videoInfo.thumbnailUrl)
                     message.channel.sendEmbed(play_info);
                     queueNames.push(videoInfo.title);
@@ -1385,7 +1389,6 @@ client.on('message', function(message) {
                     message.channel.sendEmbed(play_info)
                     message.channel.send(`
                             **${videoInfo.title}** تم تشغيل `)
-                    // client.user.setGame(videoInfo.title,'https://www.twitch.tv/Abdulmohsen');
                 });
             });
         }
@@ -1394,7 +1397,6 @@ client.on('message', function(message) {
         if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__يجب ان تكون في روم صوتي__**');
         message.channel.send('`✔`').then(() => {
             skip_song(message);
-            var server = server = servers[message.guild.id];
             if (message.guild.voiceConnection) message.guild.voiceConnection.disconnect();
         });
     }
@@ -1421,7 +1423,6 @@ client.on('message', function(message) {
     else if (mess.startsWith(prefix + 'stop')) {
         if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__يجب ان تكون في روم صوتي__**');
         message.channel.send('`✔`');
-        var server = server = servers[message.guild.id];
         if (message.guild.voiceConnection) message.guild.voiceConnection.disconnect();
     }
     else if (mess.startsWith(prefix + 'join')) {
@@ -1451,9 +1452,11 @@ function skip_song(message) {
 
 function playMusic(id, message) {
     voiceChannel = message.member.voiceChannel;
+    
 
 
     voiceChannel.join().then(function(connectoin) {
+      var server = servers [message.guild.id];
         let stream = ytdl('https://www.youtube.com/watch?v=' + id, {
             filter: 'audioonly'
         });
@@ -1513,7 +1516,10 @@ function isYoutube(str) {
 }
 
 
-
+///////////////////////////////////////////////////////////////////////
+// M U S I C  -   CODEES //////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
 
 
 
