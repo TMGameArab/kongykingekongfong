@@ -1297,11 +1297,15 @@ const music = new Music(client, {
   clearInvoker: true,      // If permissions applicable, allow the bot to delete the messages that invoke it.
   playCmd: 'play',        // Sets the name for the 'play' command.
   volumeCmd: 'vol',     // Sets the name for the 'volume' command.
-  thumbnailType: "medium",
+  thumbnailType: 'medium',
   enableQueueStat: true,
   leaveCmd: 'stop',      // Sets the name for the 'leave' command.
-  disableLoop: true,        // Disable the loop command.
-  streamMode: '1',
+  anyoneCanSkip: true,
+  disableLoop: false,
+  ownerOverMember: true,
+  searchCmd: 'search',
+  botOwner: '171259176029257728',        // Disable the loop command.
+  streamMode: '0',
 });
 
 
