@@ -6,7 +6,7 @@ const prefix = ".";
 
 client.on('ready', () => {
   client.user.setGame(`.help | .invite | ${client.guilds.size} servers!`,'https://www.twitch.tv/');
-  console.log('[ByteTech™] KingBot has run successfly!')
+  console.log('[ByteTech™] KingBot has run successfly!');
 });
 
 client.login(process.env.BOT_TOKEN);
