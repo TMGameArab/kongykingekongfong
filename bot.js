@@ -115,6 +115,29 @@ client.on('message', message => {
 }
 });
 
+
+
+client.on('message', message => {
+ if (message.content === prefix + 'help') {
+         let embed = new Discord.RichEmbed()
+.setThumbnail("http://markinternational.info/data/out/595/224155594-imagenes-de-apple.jpg")    
+      .addField("**:musical_note:  اوامر الميوزك**","** **")
+      .addField("**.play :musical_note: **","**لـ تشغيل لاغنيه**")
+      .addField("**.vol :musical_note:**","**لرفع صوت لاغنيه**")
+      .addField("**.stop :musical_note:**","**لـ اطفاء لاغنيه**")
+      .addField("**.search :musical_note:**","**لـ عرض قائمه لاغاني**")
+      .addField("**.skip :musical_note:**","**لـ نخطي لاغنيه**")
+.setColor('RANDOM')
+  message.author.sendEmbed(embed);
+    }
+});
+   
+
+
+
+
+
+
 client.on('message', message => {
 if (message.content === prefix + 'help') {
          let embed = new Discord.RichEmbed()
