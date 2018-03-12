@@ -5,8 +5,9 @@ const Music = require('discord.js-musicbot-addon');
 const prefix = ".";
 
 client.on('ready', () => {
-  client.user.setGame(`.help | .invite | ${client.guilds.size} servers!`,'https://www.twitch.tv/');
-});
+    client.user.setGame(`.help | .invite >> NEW! .play | .search`,`http://www.twitch.tv/v5bz`);
+      client.user.setStatus('KingBot Is Running');
+  });
 
 client.login(process.env.BOT_TOKEN);
 
@@ -1245,10 +1246,7 @@ let embed = new Discord.RichEmbed()
 // M U S I C  -   CODEES //////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
-client.on('message', message => {
-  if(message.contet === prefix + "play") {
-  message.channel.sendMessage("**Not happy with results? or It's not the song!** \n USE: `.search`");
-}});
+
 
 const music = new Music(client, {
   prefix: ".", // Prefix for the commands.
