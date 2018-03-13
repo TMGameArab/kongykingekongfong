@@ -62,8 +62,12 @@ client.on('message', message => {
     }else {
     var z = message.mentions.users.first();
     }
+  
+let embed = new Discord.RichEmbed ()
 
- message.channel.sendMessage(`${z.avatarURL}`);
+.setImage(`${z.avatarURL}`)
+
+ message.channel.sendMessage(embed);
 }
 });
 
