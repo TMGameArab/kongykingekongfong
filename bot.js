@@ -5,7 +5,7 @@ const Music = require('discord.js-musicbot-addon');
 const prefix = ".";
 
 client.on('ready', () => {
-    client.user.setGame(`.play | .search  `,`http://www.twitch.tv/v5bz`);
+    client.user.setGame(`.play | .search !!!  `,`http://www.twitch.tv/v5bz`);
       client.user.setStatus('KingBot Is Running');
   });
 
