@@ -18,6 +18,7 @@ client.on('message', message => {
     }
 });
 
+
 /////members count////////
 client.on('message', message => {
   if (message.content === prefix + ('members')) {
@@ -50,6 +51,19 @@ client.on('message', message => {
 
   }
 
+});
+
+client.on('message', message => {
+  if(message.content === prefix + "avatar") {
+  
+    var args = message.content.split(' ').slice(1).join(' ');
+    if (args === '') {
+      var imgx = message.author.avatarURL;
+    } else {
+      const imgx = message.mentions.users.first();
+    }
+
+ message.channel.sendMessage(`${imgx.avatarURL}`);}
 });
 
 
@@ -216,13 +230,6 @@ client.on("message", message => {
       message.channel.send(`:ballot_box_with_check: TemporarySound : \`${nam}\``).then(c => setTimeout(() => c.edit(`<@${message.author.id}> :stopwatch:  انتهى وقت الروم الصوتي`), 120000))  // 120000 دقيقتان
     }
     });
-
-client.on('message', message => {
-  if (message.content === prefix + 'avatar') {
-    message.channel.sendMessage(message.author.avatarURL);
-  }
-});
-
 
 client.on('message', message => {
      if (message.content === prefix + "bot") {
