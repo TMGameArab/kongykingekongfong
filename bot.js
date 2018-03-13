@@ -5,7 +5,7 @@ const Music = require('discord.js-musicbot-addon');
 const prefix = ".";
 
 client.on('ready', () => {
-    client.user.setGame(`.play | .search`,`http://www.twitch.tv/v5bz`);
+    client.user.setGame(`.play | .search  `,`http://www.twitch.tv/v5bz`);
       client.user.setStatus('KingBot Is Running');
   });
 
@@ -54,21 +54,35 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-  var args = message.content.split(" ").slice(1);    
   if(message.content === prefix + "avatar") {
-    let args = message.content.split(' ').slice(1).join(' ');
-    if (args == '') {
-    var z = message.author;
-    }else {
-    var z = message.mentions.users.first();
+  var mentioned = message.mentions.users.first();
+
+  var imgxx;
+    if (mentioned){
+        var imgxx = mentioned
+    } else {
+var imgxx = message.author
     }
-  
-let embed = new Discord.RichEmbed ()
-
-.setImage(`${z.avatarURL}`)
-
- message.channel.sendMessage(embed);
+ message.channel.sendMessage(imgxx);
 }
+});
+
+
+client.on('message', message => {
+  if (message.content.startsWith(".avatar")) {
+      var mentionned = message.mentions.users.first();
+  var x5bzm;
+    if(mentionned){
+        var x5bzm = mentionned;
+    } else {
+        var x5bzm = message.author;
+        
+    }
+      const embed = new Discord.RichEmbed()
+      .setColor("RANDOM")
+      .setImage(`${x5bzm.avatarURL}`)
+    message.channel.sendEmbed(embed);
+  }
 });
 
 
