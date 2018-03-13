@@ -58,7 +58,7 @@ client.on('message', message => {
   var mentioned = message.mentions.users.first();
   var imgxx;
     if (mentioned){
-        var imgxx = mentioned
+        var imgxx = mentioned;
     } else {
 var imgxx = message.author;
     }
@@ -66,7 +66,6 @@ var imgxx = message.author;
  message.channel.sendMessage(imgxx.avatarURL);
 }
 });
-
 
 
 ///Anti-Advertising
