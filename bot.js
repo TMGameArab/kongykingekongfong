@@ -63,7 +63,7 @@ client.on('message', message => {
     } else {
 var imgxx = message.author
     }
- message.channel.sendMessage(imgxx);
+ message.channel.sendMessage(imgxx.avatarURL);
 }
 });
 
