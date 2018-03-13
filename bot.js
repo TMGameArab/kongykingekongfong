@@ -56,7 +56,7 @@ client.on('message', message => {
 client.on('message', message => {
   if(message.content === prefix + "avatar") {
   
-    let args = message.content.split(' ').slice(1).join(' ');
+    let args = message.content.split(' ').slice(1);
     if (args == '') {
     var z = message.author;
     }else {
