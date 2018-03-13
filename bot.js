@@ -54,16 +54,17 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
+  var args = message.content.split(" ").slice(1);    
   if(message.content === prefix + "avatar") {
-  
-    let args = message.content.split(' ').slice(1);
+    let args = message.content.split(' ').slice(1).join(' ');
     if (args == '') {
     var z = message.author;
     }else {
     var z = message.mentions.users.first();
     }
 
- message.channel.sendMessage(`${z.avatarURL}`);}
+ message.channel.sendMessage(`${z.avatarURL}`);
+}
 });
 
 
