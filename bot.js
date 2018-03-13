@@ -56,14 +56,14 @@ client.on('message', message => {
 client.on('message', message => {
   if(message.content === prefix + "avatar") {
   
-    var args = message.content.split(' ').slice(1).join(' ');
-    if (args === '') {
-      var imgx = message.author.avatarURL;
-    } else {
-      const imgx = message.mentions.users.first();
+    let args = message.content.split(' ').slice(1).join(' ');
+    if (args == '') {
+    var z = message.author;
+    }else {
+    var z = message.mentions.users.first();
     }
 
- message.channel.sendMessage(`${imgx.avatarURL}`);}
+ message.channel.sendMessage(`${z.avatarURL}`);}
 });
 
 
