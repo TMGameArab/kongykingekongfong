@@ -1308,9 +1308,9 @@ const music = new Music(client, {
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
 
-bot.on('message', message => {
+client.on('message', message => {
  
-    if (message.content.startsWith("#profile")) { // الامر
+    if (message.content.startsWith(prefix + "profile")) { // الامر
      let canvas = new Canvas(300, 300) //حجم الصوره الي هتظهر
      let ctx = canvas.getContext('2d')
         let Image = Canvas.Image
