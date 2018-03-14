@@ -11,7 +11,9 @@
     "discord.js-musicbot-addon": "^1.10.3",
     "fs": "0.0.1-security",
     "node-opus": "^0.2.7",
-    "opusscript": "0.0.6"
+    "opusscript": "0.0.6",
+    "snekfetch": "^4.0.0-beta.0",
+    "canvas": "^1.6.9"
   },
   "engines": {
     "node": "8.x"
