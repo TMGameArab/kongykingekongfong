@@ -1311,3 +1311,146 @@ const music = new Music(client, {
 // M U S I C  -   CODEES //////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////
+//nigaaaaaaaaaaaaaaaaaaaaaaaaaaaa //////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+var memes =["https://cdn.discordapp.com/attachments/419823645280436224/423563689954902016/unknown.png","https://cdn.discordapp.com/attachments/419823645280436224/423563233723547658/unknown.png","https://cdn.discordapp.com/attachments/419823645280436224/423562874850508804/unknown.png","https://cdn.discordapp.com/attachments/419823645280436224/423562665026125845/unknown.png","https://cdn.discordapp.com/attachments/419823645280436224/423562493726687253/unknown.png","https://cdn.discordapp.com/attachments/419823645280436224/423562319826518028/unknown.png","https://cdn.discordapp.com/attachments/419823645280436224/423562059167563778/unknown.png","https://cdn.discordapp.com/attachments/419823645280436224/423561747195101186/unknown.png"]
+client.on('message', message => {
+    var args = message.content.split(" ").slice(1);         
+if(message.content.startsWith(prefix + 'لغز')) {
+     var embed = new Discord.RichEmbed()
+.setImage(memes[Math.floor(Math.random() * memes.length)])
+message.channel.sendEmbed(embed);
+}
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+client.on('message', msg => {
+  if (msg.content === 'السان') {
+    msg.reply('**اجابه صحيحه**');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'الباب المفتوح') {
+    msg.reply('**اجابه صحيحه**');
+  }
+});
+
+
+client.on('message', msg => {
+  if (msg.content === 'حرف الواو') {
+    msg.reply('**اجابه صحيحه**');
+  }
+});
+
+
+
+client.on('message', msg => {
+  if (msg.content === 'الواو') {
+    msg.reply('**اجابه صحيحه**');
+  }
+});
+
+
+
+client.on('message', msg => {
+  if (msg.content === 'البصل') {
+    msg.reply('**اجابه صحيحه**');
+  }
+});
+
+
+
+
+client.on('message', msg => {
+  if (msg.content === 'البيض') {
+    msg.reply('**اجابه صحيحه**');
+  }
+});
+
+
+
+client.on('message', msg => {
+  if (msg.content === 'البيضه') {
+    msg.reply('**اجابه صحيحه**');
+  }
+});
+
+
+
+
+client.on('message', msg => {
+  if (msg.content === 'العمر') {
+    msg.reply('**اجابه صحيحه**');
+  }
+});
+
+
+client.on('message', msg => {
+  if (msg.content === 'الملح') {
+    msg.reply('**اجابه صحيحه**');
+  }
+});
+
+
+
+client.on('message', msg => {
+  if (msg.content === 'السكر') {
+    msg.reply('**اجابه صحيحه**');
+  }
+});
+
+
+client.on('message', msg => {
+  if (msg.content === 'المشط') {
+    msg.reply('**اجابه صحيحه**');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'مشط') {
+    msg.reply('**اجابه صحيحه**');
+  }
+});
+
+
+
+client.on('message', msg => {
+  if (msg.content === 'قاتل نفسه') {
+    msg.reply('**اجابه صحيحه**');
+  }
+});
+
+///////////////////////////////////////////////////////////////////////
+// nice nigaaaaaaaaaaaaaaaaaaaaaaaaaaaa//////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
