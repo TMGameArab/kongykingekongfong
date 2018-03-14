@@ -196,6 +196,7 @@ if (message.content === prefix + 'help') {
       .addField("**.صراحه :video_game: **","**لـ لعبه صراحه**")
       .addField("**.مريم :video_game:  **","**لـ لعبه مريم**")
       .addField("**.هل تعلم:video_game:  **","**لـ لعبه هل تعلم**")
+      .addField("**.لغز:video_game:  **","**لـ يعطيك لغز في صوره:new: **")
 .setColor('RANDOM')
   message.author.sendEmbed(embed);
     }
