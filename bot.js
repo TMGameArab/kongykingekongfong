@@ -1362,7 +1362,7 @@ const w = ['/img/w1.jpg','/img/w2.jpg','/img/w3.jpg','/img/w4.jpg','/img/w6.jpg'
                        ctx.fillText(member.user.username, 213, 190);
                        let channel = member.guild.channels.find('name', 'welcome');
 
-client.channels.get(channel).sendFile(canvas.toBuffer())
+client.channels.get(channel).send(canvas.toBuffer())
 client.channels.get(channel).send(`Welcome ${member} To __${member.guild.name}__`)
 
 
