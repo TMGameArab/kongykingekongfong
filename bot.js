@@ -1332,6 +1332,9 @@ client.on('message', message => {
 if(message.content.startsWith(prefix + 'لغز')) {
      var embed = new Discord.RichEmbed()
 .setImage(memes[Math.floor(Math.random() * memes.length)])
+     client.on('message', msg => {
+  if (msg.content === 'مشط') {
+    msg.reply('**اجابه صحيحه**');
 message.channel.sendEmbed(embed);
 }
 });
@@ -1425,11 +1428,6 @@ client.on('message', msg => {
 });
 
 
-client.on('message', msg => {
-  if (msg.content === 'المشط') {
-    msg.reply('**اجابه صحيحه**');
-  }
-});
 
 client.on('message', msg => {
   if (msg.content === 'مشط') {
