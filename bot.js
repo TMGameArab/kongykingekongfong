@@ -219,11 +219,9 @@ if (message.content === prefix + 'help') {
 });
 
 client.on('message', message => {
-    if (message.content.startsWith(".info")) {
+if (message.content === prefix + 'info') {
         
-         const embed = new Discord.RichEmbed()
-             .setColor('RANDOM')
-             .setTitle("**KING BOT**")
+         let embed = new Discord.RichEmbed()
              .setDescription(`**
           ** ---------------------'معلومات عن البوت'--------------- **
           ** :white_check_mark:  بوت عربي     **
@@ -233,8 +231,8 @@ client.on('message', message => {
          ** 24/شغل 24
          **------------------------'معلومات عن البوت'-----------------**
          **شكرا خاص لمن البوت اشياء قادمه ان شالله **
-
-
+         
+       .setColor('RANDOM')
 
        message.author.sendEmbed(embed);                                                                             
    }
