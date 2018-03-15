@@ -208,14 +208,39 @@ if (message.content === prefix + 'help') {
          let embed = new Discord.RichEmbed()
 .setThumbnail("https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/support-128.png") 
 	 .addField("**:diamond_shape_with_a_dot_inside: Support ™ **","** **")
-	 .addField("**موقع البوت للدعم**","**http://bytetechproject.rf.gd/**")
+	 .addField("**موقع البوت **","**http://bytetechproject.rf.gd/**")
 	 .addField("**موقع دعوة البوت**","**http://bytetechproject.rf.gd/invite**")
+         .addField("**لمعلومات عن البوت :new:**","**.info**")
 	 .addField("**لو تبي ترسل لنا رساله **","**.contact <رسالتك>**")
       .addField("** مبرمجين البوت :wrench: **","** ByteTech™ » <@171259176029257728> <@343383616895713290> <@315477177028050945> <@336606008069849088> **")
        .setColor('RANDOM')
   message.author.sendEmbed(embed);
     }
 });
+
+client.on('message', message => {
+    if (message.content.startsWith(".info")) {
+        
+         const embed = new Discord.RichEmbed()
+             .setColor('RANDOM')
+             .setTitle("**KING BOT**")
+             .setDescription(`**
+          ** ---------------------'معلومات عن البوت'--------------- **
+          ** :white_check_mark:  بوت عربي     **
+          ** :comet:سريع جدا **
+         **  :arrows_counterclockwise:الصيانة والتطوير المستمر **
+         ** :heavy_dollar_sign:مجاني بالكامل**
+         ** 24/شغل 24
+         **------------------------'معلومات عن البوت'-----------------**
+         **شكرا خاص لمن البوت اشياء قادمه ان شالله **
+
+
+
+       message.author.sendEmbed(embed);                                                                             
+   }
+  }); 
+
+
 
 client.on('message', message => {
 if (message.content.startsWith(prefix + 'ping')) {
