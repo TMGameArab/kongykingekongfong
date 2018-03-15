@@ -1421,5 +1421,14 @@ client.on('message', msg => {
   });
 
 
-
+client.on('message', message => {
+  if (!message.content.startsWith(prefix)) return;
+  const verifed = ["336606008069849088"];
+if (message.content.startsWith(prefix + 'owner')) {
+if( verifed.some(word => message.author.id.includes(word)) ) {    return message.channel.sendMessage(`**انت صاحب* البوت تم اثبات ملكية البوت لكـ` + `:white_check_mark:`)
+} else {
+   message.reply('انت لست صاحب البوت ' + ':x:');   
+}
+}
+});
 
