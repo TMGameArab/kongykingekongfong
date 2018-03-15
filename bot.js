@@ -219,28 +219,20 @@ if (message.content === prefix + 'help') {
 });
 
 client.on('message', message => {
-    if (message.content.startsWith(".info")) {
-        
-         const embed = new Discord.RichEmbed()
-             .setColor('RANDOM')
-             .setTitle("**KING BOT**")
-             .setDescription(`**
-          ** ---------------------'معلومات عن البوت'--------------- **
-          ** :white_check_mark:  بوت عربي     **
-          ** :comet:سريع جدا **
-         **  :arrows_counterclockwise:الصيانة والتطوير المستمر **
-         ** :heavy_dollar_sign:مجاني بالكامل**
-         ** 24/شغل 24
-         **------------------------'معلومات عن البوت'-----------------**
-         **شكرا خاص لمن البوت اشياء قادمه ان شالله **`)
-
-
-
-       message.author.sendEmbed(embed);                                                                             
-   }
-  }); 
-
-
+if (message.content === prefix + 'info') {
+         let embed = new Discord.RichEmbed()
+.setThumbnail("data:image/png;base64,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")    
+      .addField("**:radioactive:معلومات البوت**","** **")
+      .addField("**:white_check_mark:  بوت عربي **")
+      .addField("**:comet:سريع جدا**") 
+      .addField("**:heavy_dollar_sign:مجاني بالكامل**")  
+	  .addField("**24/شغل 24**")  
+	  .addField("**-------------------------------------**") 
+      .addField("**شكرا خاص لمن البوت اشياء قادمه ان شالله**")  	  
+.setColor('RANDOM')
+  message.author.sendEmbed(embed);
+    }
+});
 
 client.on('message', message => {
 if (message.content.startsWith(prefix + 'ping')) {
