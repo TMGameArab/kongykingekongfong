@@ -2,6 +2,8 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const fs = require('fs');
 const Music = require('discord.js-musicbot-addon');
+const sql = require("sqlite");
+sql.open("./credits.sqlite");
 const prefix = ".";
 
 ///////////////////////////////////////////////////////////////////////////
@@ -1312,6 +1314,54 @@ const music = new Music(client, {
 // M U S I C  -   CODEES //////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
+
+client.on("message", message => {
+    if (message.author.bot) return;
+    if (message.channel.type !== "text") return;
+  
+    sql.get(`SELECT * FROM scores WHERE userId ="${message.author.id}"`).then(row => {
+      if (!row) {
+        sql.run("INSERT INTO scores (userId, credits,) VALUES (?, ?, ?)", [message.author.id, 1, 0]);
+      } else {
+        let curLevel = Math.floor(0.1 * Math.sqrt(row.points + 1));
+        if (curLevel > row.level) {
+          row.level = curLevel;
+          sql.run(`UPDATE scores SET points = ${row.points + 1}, level = ${row.level} WHERE userId = ${message.author.id}`);
+          message.reply(`You've leveled up to level **${curLevel}**! Ain't that dandy?`);
+        }
+        sql.run(`UPDATE scores SET points = ${row.points + 1} WHERE userId = ${message.author.id}`);
+      }
+    }).catch(() => {
+      console.error;
+      sql.run("CREATE TABLE IF NOT EXISTS scores (userId TEXT, points INTEGER, level INTEGER)").then(() => {
+        sql.run("INSERT INTO scores (userId, points, level) VALUES (?, ?, ?)", [message.author.id, 1, 0]);
+      });
+    });
+  
+    if (!message.content.startsWith(prefix)) return;
+  
+    if (message.content.startsWith(prefix + "level")) {
+      sql.get(`SELECT * FROM scores WHERE userId ="${message.author.id}"`).then(row => {
+        if (!row) return message.reply("**Your current level is 0**");
+        message.reply(`Your current level is ${row.level}`);
+      });
+    } else
+  
+    if (message.content.startsWith(prefix + "credit")) {
+      sql.get(`SELECT * FROM scores WHERE userId ="${message.author.id}"`).then(row => {
+        if (!row) return message.reply('**Sorry your :credit_card: balance is $0.**');
+        message.reply( 'Your Balance is ' +  `${row.points}` + '$' + ' :credit_card:');
+      });
+    }
+  });
+
+  ////////////////////////////////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
 var memes =["https://cdn.discordapp.com/attachments/419823645280436224/423563689954902016/unknown.png","https://cdn.discordapp.com/attachments/419823645280436224/423563233723547658/unknown.png","https://cdn.discordapp.com/attachments/419823645280436224/423562874850508804/unknown.png","https://cdn.discordapp.com/attachments/419823645280436224/423562665026125845/unknown.png","https://cdn.discordapp.com/attachments/419823645280436224/423562493726687253/unknown.png","https://cdn.discordapp.com/attachments/419823645280436224/423562319826518028/unknown.png","https://cdn.discordapp.com/attachments/419823645280436224/423562059167563778/unknown.png","https://cdn.discordapp.com/attachments/419823645280436224/423561747195101186/unknown.png"]
 client.on('message', message => {
     var args = message.content.split(" ").slice(1);         
