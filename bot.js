@@ -193,6 +193,7 @@ if (message.content === prefix + 'help') {
       .addField("**.مريم :video_game:  **","**لـ لعبه مريم**")
       .addField("**.هل تعلم:video_game:  **","**لـ لعبه هل تعلم**")
       .addField("**.لغز:video_game:  **","**لـ يعطيك لغز في صوره:new: **")
+      .addField("**.حكم:video_game:  **","**لـ يعطيك حكم لازم تعمله:new: **")
 .setColor('RANDOM')
   message.author.sendEmbed(embed);
     }
@@ -1469,10 +1470,9 @@ client.on('message', msg => {
  if (message.content.startsWith(prefix + 'حكم')) {
   var mariam= new Discord.RichEmbed()
   .setTitle("لعبة حكم ..")
-  .setTitle("by king-bot")
   .setColor('RANDOM')
   .setDescription(`${scc[Math.floor(Math.random() * scc.length)]}`)
    message.channel.sendEmbed(mariam);
-   message.react("👻")
+   message.react(":thinking:")
   }
 });
