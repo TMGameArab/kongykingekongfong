@@ -1027,42 +1027,15 @@ if (message.content === prefix + "unmutechannel") {
 if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**⚠ | لا يوجد لديك صلاحية**');
            message.channel.overwritePermissions(message.guild.id, {
          SEND_MESSAGES: true
-
            }).then(() => {
                message.reply("تم فتح الشات:white_check_mark:")
            });
              }
-
-
-
 });
 
-
-client.on('message', message => {
-  let args = message.content.split(" ").slice(1); 
-  if(message.content === prefix + "setchannel") {
-    if(!message.member.hasPermission("MANAGE_GUILD")) return;
-    if(!args[0]) return;
-    let sChannels = JSON.parse(fs.readFileSync('./channels.json', 'utf8'));
-    sChannels[message.guild.id] = {
-        sChannels: args[0]
-    };
-    fs.writeFile("./channels.json", JSON.stringify(sChannels), (err) => {
-      if (err) console.log(err)
-    });
-    message.channel.send(`**Channel setted to ${args[0]}!**`)
-    }
-});
 
 client.on('guildMemberAdd', member => {
-  let sChannels = JSON.parse(fs.readFileSync('./channels.json', 'utf8'));
-  if(!sChannels[member.guild.id]){
-    sChannels[member.guild.id] = {
-      sChannels: config.ssChannels
-    };
-  }
-  let sChannel = sChannels[member.guild.id].sChannels;
-    let channel = member.guild.channels.find('name', sChannel);
+    let channel = member.guild.channels.find('name', 'welcome');
     let memberavatar = member.user.avatarURL
       if (!channel) return;
     let embed = new Discord.RichEmbed()
