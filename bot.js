@@ -233,7 +233,6 @@ if (message.content === prefix + 'info') {
   message.author.sendEmbed(embed);
     }
 });
-
 client.on('message', message => {
 if (message.content.startsWith(prefix + 'ping')) {
            if(!message.channel.guild) return;
@@ -1445,16 +1444,4 @@ client.on('message', msg => {
       msg.reply('**اجابه صحيحه**');
     }
   });
-
-
-client.on('message', message => {
-  if (!message.content.startsWith(prefix)) return;
-  const verifed = ["336606008069849088"];
-if (message.content.startsWith(prefix + 'owner')) {
-if( verifed.some(word => message.author.id.includes(word)) ) {    return message.channel.sendMessage(`**انت صاحب* البوت تم اثبات ملكية البوت لكـ` + `:white_check_mark:`)
-} else {
-   message.reply('انت لست صاحب البوت ' + ':x:');   
-}
-}
-});
 
