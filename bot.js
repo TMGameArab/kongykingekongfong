@@ -14,6 +14,7 @@ const prefix = ".";
 client.on('ready', () => {
     client.user.setActivity("Music!", {type: "LISTENING"});
       client.user.setStatus('KingBot Is Running');
+      client.user.setAvatar('./100celeb.png')
   });
 
 client.login(process.env.BOT_TOKEN);
@@ -1306,6 +1307,7 @@ let embed = new Discord.RichEmbed()
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
 
+//+ TO DO : ADD ALIAS!
 
 const music = new Music(client, {
   prefix: ".", // Prefix for the commands.
