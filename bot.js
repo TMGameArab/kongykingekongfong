@@ -1,8 +1,8 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const fs = require('fs');
-const config = require("./prefix.json");
-const prefix = prefix;
+const config = require("./config.json");
+const prefix = config.prefix;
 const Music = require('discord.js-musicbot-addon');
 client.login(process.env.BOT_TOKEN);
 ///////////////////////////////////////////////////////////////////////////
