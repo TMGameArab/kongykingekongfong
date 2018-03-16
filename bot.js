@@ -1210,7 +1210,7 @@ if (message.content.startsWith(prefix + 'st')) {
 
 
 client.on('message', message => {
-
+if(message.author.bot) return; 
 if (message.content.startsWith(prefix + "contact")) {
 if (!message.channel.guild) return;
 let args = message.content.split(" ").slice(1).join(' ');
@@ -1233,7 +1233,7 @@ message.channel.sendEmbed(embed);
 
 
 client.on('message', message => {
-
+ if(message.author.bot) return; 
   if (message.content.startsWith(prefix + "contact")) {
   if (!message.channel.guild) return;
   let args = message.content.split(" ").slice(1).join(' ');
@@ -1312,7 +1312,6 @@ const music = new Music(client, {
   youtubeKey: 'AIzaSyApvbcgvYRGulf1I1Ffjfhr2K-S6TX0e9w',
   global: false,            // Non-server-specific queues.
   maxQueueSize: 50,        // Maximum queue size of 25.
-  clearInvoker: false,      // If permissions applicable, allow the bot to delete the messages that invoke it.
   playCmd: 'play',        // Sets the name for the 'play' command.
   volumeCmd: 'vol',     // Sets the name for the 'volume' command.
   thumbnailType: 'high',
@@ -1321,9 +1320,20 @@ const music = new Music(client, {
   disableLoop: false,
   ownerOverMember: true,
   searchCmd: 'search',
+  requesterName: true,
   inlineEmbeds: true,
-  botOwner: '171259176029257728',        // Disable the loop command.
-  streamMode: '0',
+  helpCmd: 'music',
+  botOwner: '171259176029257728',  
+  queueCmd: 'queue',
+  pauseCmd: 'pause',
+  resumeCmd: 'resume',
+  skipCmd: 'skip',
+  loopCmd: 'loop',
+  //////////////////////////////
+  skipAlt: 's',
+  playAlt: 'p',
+  queueAlt: 'q',
+  loopAlt: 'l',
 });
 
 ///////////////////////////////////////////////////////////////////////
