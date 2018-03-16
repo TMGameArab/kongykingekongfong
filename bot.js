@@ -3,8 +3,6 @@ const client = new Discord.Client();
 const botconfig = require("./botconfig.json");
 const fs = require('fs');
 const Music = require('discord.js-musicbot-addon');
-const db = require('quick.db');
-
 
 ///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
@@ -18,36 +16,12 @@ client.on('ready', () => {
       client.user.setStatus('KingBot Is Running');
   });
 
-  client.on('message', message => {
-    if (message.channel.type != 'text') return message.channel.send('Please use commands in the server!')
-        db.fetchObject(`guildPrefix_${message.guild.id}`).then(i => { // This fetches the current prefix, if none is supplied it would be an empty string.
-    
-            let prefix;
-    
-            if (i.text) { 
-                prefix = i.text
-            } else { 
-                prefix = '.'
-            }})});
-
-            client.on('message', message => {
-        let args = message.content.slice(prefix.length).trim().split(" "); 
-        if (!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('This requires you to have a role with `Administrator`'); // Tell them if they don't have the proper permissions.
-        if (!args.join(" ")) return message.channel.send('Please enter arguments. `setPrefix <prefix>`'); // Tell them if they didn't supply any arguments.
-    
-        db.updateText(`guildPrefix_${message.guild.id}`, args.join().trim()).then(i => { // Update the text field in that ID. .trim() removes the whitespaces on both side.
-    
-            message.channel.send('Prefix changed to ' + i.text); // Post in chat with the new prefix!
-    
-        })});
 client.on('message', message => {
    if (message.content === prefix + "roll") {
   message.channel.sendMessage(Math.floor(Math.random() * 100));
     }
 });
 
-
-/////members count////////
 client.on('message', message => {
   if (message.content === prefix + ('members')) {
     if (message.author.id !== '343383616895713290') return;
