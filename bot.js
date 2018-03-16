@@ -1329,11 +1329,7 @@ const music = new Music(client, {
   resumeCmd: 'resume',
   skipCmd: 'skip',
   loopCmd: 'loop',
-  //////////////////////////////
-  skipAlt: ['s'],
-  playAlt: ['p'],
-  queueAlt: ['q'],
-  loopAlt: ['l'],
+  enableQueueStat: true,
 });
 
 ///////////////////////////////////////////////////////////////////////
