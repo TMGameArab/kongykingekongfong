@@ -2,7 +2,6 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const fs = require('fs');
 const Music = require('discord.js-musicbot-addon');
-const prefix = ".";
 
 
 ///////////////////////////////////////////////////////////////////////////
@@ -25,6 +24,20 @@ client.on('message', message => {
     }
 });
 
+client.on('message', message => {
+  if(message.author.bot) return;
+  if(message.channel.type === "dm") return;
+
+  let prefixes = JSON.parse(fs.readFileSync("./prefixes.json", "utf8"));
+
+  if(!prefixes[message.guild.id]) {
+    prefixes[message.guild.id] = {
+      prefixes = "."
+    };
+  }
+  let prefix = prefixes[message.guild.id].prefixes;
+  console.log(prefix);
+});
 
 /////members count////////
 client.on('message', message => {
