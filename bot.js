@@ -19,11 +19,12 @@ client.on('ready', () => {
   });
 
 
-  client.on('message', async message => {
+  client.on('message', message => {
     module.exports.help = {name: "prefix"}
-    if(message.content === "setprefix") {
+    if(message.content === prefix + "setprefix") {
       if(message.author.bot) return;
-    let args = message.content.split(" ").slice(1);
+    let messageArray = message.content.split(" ");
+    let args = messageArray.slice(1);
    if(!message.member.hasPermission("ADMINISTRATOR")) return message.reply("**Only admins can do this command!**"); 
    if(!args[0] || args[0 == "help"]) return message.reply("**Usage: .setprefix <prefix>**");
 
@@ -32,7 +33,6 @@ client.on('ready', () => {
    prefixes[message.guild.id] = {
      prefix: args[0] 
    };
-
    fs.writeFile("./prefixes.json", JSON.stringify(prefixes),(err) => {
      if (err) console.log(err)
    });
@@ -44,7 +44,7 @@ message.channel.send(embed);
    }
   });
 
-  client.on('message', async message => {
+  client.on('message', message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
 
