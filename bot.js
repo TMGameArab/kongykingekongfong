@@ -114,7 +114,7 @@ client.on('message', message=>{
 
 
 client.on('message', message => {
-  if(message.content === "help") {
+  if(message.content === prefix + "help") {
     message.author.send("**WE NEED DEVELOPERS! \n If you're inspired check out <http://bytetechproject.rf.gd/developer.html>**");
   }
 });
