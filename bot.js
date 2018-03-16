@@ -25,13 +25,10 @@ client.on('ready', () => {
     let messageArray = message.content.split(" ");
     let args = messageArray.slice(1);
    if(!message.member.hasPermission("ADMINISTRATOR")) return message.reply("**Only admins can do this command!**"); 
-   if(!args[0] || args[0 == "help"]) return message.reply("**Usage: .setprefix <prefix>**");
-
-
+   if(!args[0]) return message.reply("**Usage: .setprefix <prefix>**");
    let prefixes = JSON.parse(fs.readFileSync("./prefixes.json", "utf8"));
-
    prefixes[message.guild.id] = {
-     prefix: args[0] 
+     prefix: args
    };
    fs.writeFile("./prefixes.json", JSON.stringify(prefixes),(err) => {
      if (err) console.log(err)
