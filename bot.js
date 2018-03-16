@@ -518,7 +518,6 @@ client.on("channelCreate", (channel) => {
     atacc.setDescription('The ' + channel + ' ' + `**(` + channel.name + `)**` + ' channel was created')
     
     atacc.setAuthor(' CHANNEL CREATED ')
-    atacc.setFooter('ID: ' + channel.id + " | " + channel.createdTimestamp)
     channel.guild.channels.find("king","logs").sendEmbed(atacc)
   
 });
