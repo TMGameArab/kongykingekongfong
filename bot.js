@@ -20,13 +20,13 @@ client.on('ready', () => {
 
 
   client.on('message', message => {
-    module.exports.help = {name: "prefix"}
     if(message.content === prefix + "setprefix") {
       if(message.author.bot) return;
     let messageArray = message.content.split(" ");
     let args = messageArray.slice(1);
    if(!message.member.hasPermission("ADMINISTRATOR")) return message.reply("**Only admins can do this command!**"); 
    if(!args[0] || args[0 == "help"]) return message.reply("**Usage: .setprefix <prefix>**");
+
 
    let prefixes = JSON.parse(fs.readFileSync("./prefixes.json", "utf8"));
 
@@ -56,6 +56,7 @@ message.channel.send(embed);
       };
     }
   let prefix = prefixes[message.guild.id].prefixes;
+  console.log(prefix);
   });
 
 
