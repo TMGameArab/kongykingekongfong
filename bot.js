@@ -1439,7 +1439,7 @@ client.on('message', msg => {
     }
   });
 
- const eztowin = [
+ const scc = [
    '*** منشن الجميع وقل انا اكرهكم. ***',
 '*** اتصل على امك و قول لها انك تحبها :heart:. ***',
    '***     تصل على الوالده  و تقول لها  احب وحده.***',
@@ -1470,7 +1470,7 @@ client.on('message', msg => {
   var mariam= new Discord.RichEmbed()
   .setTitle("لعبة مريم ..")
   .setColor('RANDOM')
-  .setDescription(`${zead[Math.floor(Math.random() * zead.length)]}`)
+  .setDescription(`${scc[Math.floor(Math.random() * scc.length)]}`)
   .setImage("https://www.npa-ar.com/wp-content/uploads/2017/08/%D9%84%D8%B9%D8%A8%D8%A9-%D9%85%D8%B1%D9%8A%D9%85-300x200.jpg")
    message.channel.sendEmbed(mariam);
    message.react("👻")
