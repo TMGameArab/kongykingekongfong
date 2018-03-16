@@ -1455,3 +1455,149 @@ client.on('message', msg => {
     }
   });
 
+client.on('message', message => {
+    
+   if (message.content.startsWith("b*id")) {
+
+if(!message.channel.guild) return;
+
+let args = message.content.split(' ').slice(1).join(' ');
+
+        let defineduser = '';
+        if (!args[1]) { 
+            defineduser = message.author;
+        } else { 
+            let firstMentioned = message.mentions.users.first();
+            defineduser = firstMentioned;
+        }
+
+const w = ['./id.png'];
+var Canvas = require('canvas')
+var jimp = require('jimp')
+
+         const millis = new Date().getTime() - defineduser.createdAt.getTime();
+const now = new Date();
+dateFormat(now, 'dddd, mmmm dS, yyyy');
+const stats2 = ['online', 'Low', 'Medium', 'Insane'];
+const days = millis / 1000 / 60 / 60 / 24;
+          dateFormat(now, 'dddd, mmmm dS, yyyy');
+              let time = `${dateFormat(defineduser.createdAt)}`
+              
+        let Image = Canvas.Image,
+            canvas = new Canvas(300, 300),
+            ctx = canvas.getContext('2d');
+        ctx.patternQuality = 'bilinear';
+        ctx.filter = 'bilinear';
+        ctx.antialias = 'subpixel';
+  
+        fs.readFile(`${w[Math.floor(Math.random() * w.length)]}`, function (err, Background) {
+            if (err) return console.log(err);
+            let BG = Canvas.Image;
+            let ground = new Image;
+            ground.src = Background;
+            ctx.drawImage(ground, 0, 0, 300, 300);
+
+})
+   var mentionned = message.mentions.users.first();
+
+    var client;
+      if(mentionned){
+          var client = mentionned;
+      } else {
+          var client = message.author;
+          
+      }
+
+                let url = defineduser.displayAvatarURL.endsWith(".webp") ? defineduser.displayAvatarURL.slice(20, 20) + ".png" : defineduser.displayAvatarURL;
+                jimp.read(url, (err, ava) => {
+                    if (err) return console.log(err);
+                    ava.getBuffer(jimp.MIME_PNG, (err, buf) => {
+                        if (err) return console.log(err);
+
+                        let Avatar = Canvas.Image;
+                        let ava = new Avatar;
+                        ava.src = buf;
+                        ctx.drawImage(ava, 35 , 54, 70, 70);
+                                              var time2;
+      if(mentionned){
+          var time2 = `${dateFormat(message.mentions.users.first.joinedAt)}`;
+      } else {
+          var time2 = `${dateFormat(message.member.joinedAt)}`;
+          
+      }  
+                           var status;
+    if (defineduser.presence.status === 'online') {
+        status = 'Online';
+    } else if (defineduser.presence.status === 'dnd') {
+        status = 'Dnd';
+    } else if (defineduser.presence.status === 'idle') {
+        status = 'Idle';
+    } else if (defineduser.presence.status === 'offline') {
+        status = 'Invisible';
+    }
+    
+                        ctx.font = '15px Bold';
+                        ctx.fontSize = '15px';
+                        ctx.fillStyle = "#7c7c7c";
+                        ctx.textAlign = "center";
+                        ctx.fillText(status, 151.00 , 120 );
+                        
+    
+                       
+                        ctx.font = '20px Bold';
+                        ctx.fontSize = '15px';
+                        ctx.fillStyle = "83.50";
+                        ctx.textAlign = "7c7c7c";
+                        ctx.fillText(`${defineduser.username}`, 190.50 , 89);
+
+
+                        ctx.font = '15px Bold';
+                        ctx.fontSize = '15px';
+                        ctx.fillStyle = "83.50";
+                        ctx.textAlign = "7c7c7c";
+                        ctx.fillText(`#${defineduser.discriminator}`, 230.50  , 120);
+
+                        var time2;
+      if(mentionned){
+          var time2 = `${dateFormat(message.mentions.users.first.joinedAt)}`;
+      } else {
+          var time2 = `${dateFormat(message.member.joinedAt)}`;
+          
+      }
+           
+                                                //wl
+                        ctx.font = '15px Bold';
+                        ctx.fontSize = '15px';
+                        ctx.fillStyle = "#7c7c7c";
+                        ctx.textAlign = "center";
+                        ctx.fillText(time2, 150 , 242 );
+                        
+                        
+                        var time3;
+      if(mentionned){
+          var time3 = `${dateFormat(message.mentions.users.first.createdAt)}`;
+      } else {
+          var time3 = `${dateFormat(message.member.createdAt)}`;
+          
+      }
+           
+                                                //wl
+                        ctx.font = '15px Bold';
+                        ctx.fontSize = '15px';
+                        ctx.fillStyle = "#7c7c7c";
+                        ctx.textAlign = "center";
+                        ctx.fillText(time, 150 , 185);
+                        
+message.channel.sendFile(canvas.toBuffer())
+
+            // when someone calls this command, it also adds 1 earlier at the same, but since this is fetching the previous value, we need to add 1 to the answer, even thought it will be updated
+            //by:omar_9897
+        })
+    })
+
+
+
+
+}
+
+})
