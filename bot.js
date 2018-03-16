@@ -56,7 +56,6 @@ message.channel.send(embed);
       };
     }
   let prefix = prefixes[message.guild.id].prefixes;
-  console.log(prefix);
   });
 
 
