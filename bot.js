@@ -1330,10 +1330,10 @@ const music = new Music(client, {
   skipCmd: 'skip',
   loopCmd: 'loop',
   //////////////////////////////
-  skipAlt: 's',
-  playAlt: 'p',
-  queueAlt: 'q',
-  loopAlt: 'l',
+  skipAlt: ['s'],
+  playAlt: ['p'],
+  queueAlt: ['q'],
+  loopAlt: ['l'],
 });
 
 ///////////////////////////////////////////////////////////////////////
