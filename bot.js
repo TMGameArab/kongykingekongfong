@@ -1060,7 +1060,7 @@ client.on('guildMemberAdd', member => {
       sChannels: config.ssChannels
     };
   }
-  let sChannels = sChannels[member.guild.id].sChannels;
+  let sChannel = sChannels[member.guild.id].sChannels;
     let channel = member.guild.channels.find('name', sChannels);
     let memberavatar = member.user.avatarURL
       if (!channel) return;
