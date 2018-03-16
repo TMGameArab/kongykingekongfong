@@ -9,7 +9,6 @@
   "dependencies": {
     "discord.js": "^11.3.2",
     "discord.js-musicbot-addon": "^1.10.3",
-    "fs": "0.0.1-security",
     "node-opus": "^0.2.7",
     "opusscript": "0.0.6"
   },
