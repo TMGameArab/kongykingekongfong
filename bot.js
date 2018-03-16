@@ -1315,6 +1315,7 @@ const music = new Music(client, {
   ownerOverMember: true,
   searchCmd: 'search',
   requesterName: true,
+  inlineEmbeds: false,	
   helpCmd: 'music',
   botOwner: '171259176029257728',  
   queueCmd: 'queue',
