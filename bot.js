@@ -2,7 +2,6 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const fs = require('fs');
 const config = require("./config.json");
-const prefix = config.prefix
 const Music = require('discord.js-musicbot-addon');
 client.login(process.env.BOT_TOKEN);
 ///////////////////////////////////////////////////////////////////////////
@@ -10,6 +9,7 @@ client.login(process.env.BOT_TOKEN);
 ///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////
+
 client.on('ready', () => {
     client.user.setActivity("Music!", {type: "LISTENING"});
       client.user.setStatus('KingBot Is Running');
@@ -1037,10 +1037,31 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**⚠
 });
 
 
-
+client.on('message', message => {
+  let args = message.content.split(" ").slice(1); 
+  if(message.content === preifx + "setchannel") {
+    if(!message.member.hasPermission("MANAGE_GUILD")) return;
+    if(!args[0]) return;
+    let sChannels = JSON.parse(fs.readFileSync('./channels.json', 'utf8'));
+    sChannels[message.guild.id] = {
+        sChannels: args[0]
+    };
+    fs.writeFile("./channels.json", JSON.stringify(sChannels), (err) => {
+      if (err) console.log(err)
+    });
+    message.channel.send(`**Channel setted to ${args[0]}!**`)
+    }
+});
 
 client.on('guildMemberAdd', member => {
-    let channel = member.guild.channels.find('name', 'welcome');
+  let sChannels = JSON.parse(fs.readFileSync('./channels.json', 'utf8'));
+  if(!sChannels[member.guild.id]){
+    sChannels[member.guild.id] = {
+      sChannels: config.ssChannels
+    };
+  }
+  let sChannels = sChannels[member.guild.id].sChannels;
+    let channel = member.guild.channels.find('name', sChannels);
     let memberavatar = member.user.avatarURL
       if (!channel) return;
     let embed = new Discord.RichEmbed()
