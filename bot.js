@@ -1,22 +1,62 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
+const botconfig = require("./botconfig.json");
 const fs = require('fs');
 const Music = require('discord.js-musicbot-addon');
-let prefix = ".";
+let prefix = botconfig.prefix;
 
 
 ///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////
-
+client.login(process.env.BOT_TOKEN);
+/////////////////////////////////////
 
 client.on('ready', () => {
     client.user.setActivity("Music!", {type: "LISTENING"});
       client.user.setStatus('KingBot Is Running');
   });
 
-client.login(process.env.BOT_TOKEN);
+
+  client.on('message', async message => {
+    module.exports.help = {name: "prefix"}
+    if(message.content === "setprefix") {
+      if(message.author.bot) return;
+    let args = message.content.split(" ").slice(1);
+   if(!message.member.hasPermission("ADMINISTRATOR")) return message.reply("**Only admins can do this command!**"); 
+   if(!args[0] || args[0 == "help"]) return message.reply("**Usage: .setprefix <prefix>**");
+
+   let prefixes = JSON.parse(fs.readFileSync("./prefixes.json", "utf8"));
+
+   prefixes[message.guild.id] = {
+     prefix: args[0] 
+   };
+
+   fs.writeFile("./prefixes.json", JSON.stringify(prefixes),(err) => {
+     if (err) console.log(err)
+   });
+let embed = new Discord.RichEmbed ()
+.setColor("RANDOM")
+.setTitle("Prefix set to")
+.setDescription(`Set to ${args[0]}`);
+message.channel.send(embed);
+   }
+  });
+
+  client.on('message', async message => {
+    if(message.author.bot) return;
+    if(message.channel.type === "dm") return;
+
+    let prefixes = JSON.parse(fs.readFileSync("./prefixes.json", "utf8"));
+
+    if(!prefixes[message.guild.id]) {
+      prefixes[message.guild.id] = {
+        prefixes: botconfig.prefix
+      };
+    }
+  let prefix = prefixes[message.guild.id].prefixes;
+  });
 
 
 client.on('message', message => {
