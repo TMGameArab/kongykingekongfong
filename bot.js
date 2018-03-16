@@ -25,21 +25,10 @@ client.on('message', message => {
   let prefixes = JSON.parse(fs.readFileSync('./prefixes.json', 'utf8'));
   if(!prefixes[message.guild.id]){
     prefixes[message.guild.id] = {
-      prefixes: "."
+      prefixes: config.prefix
     };
   }
   let prefix = prefixes[message.guild.id].prefixes;
-  if(message.content === prefix + "setprefix") {
-    if(!message.member.hasPermission("MANAGE_GUILD")) return;
-    let newPrefix = message.content.split(" ").slice(1).join(" ")
-    if(!newPrefix) return message.reply(`.setprefix <prefix>`);
-    prefixes[message.guild.id] = {
-      prefixes: newPrefix
-    };
-    fs.writeFile("./prefixes.json", JSON.stringify(prefixes), (err) =>{
-      if(err) console.log(err)
-    })
-  }
 });
 
 
