@@ -1466,7 +1466,7 @@ client.on('message', msg => {
    '*** روح اكل ملح + ليمون اذا مافيه اكل اي شيء من اختيار الي معك.  ***'
 ]
  client.on('message', message => {
- if (message.content.startsWith(prefix + 'حكم')) {
+ if (message.content.startsWith(`.حكم')) {
   var mariam= new Discord.RichEmbed()
   .setTitle("لعبه حكم")
   .setColor('RANDOM')
