@@ -1062,7 +1062,7 @@ client.on('guildMemberAdd', member => {
     };
   }
   let sChannel = sChannels[member.guild.id].sChannels;
-    let channel = member.guild.channels.find('name', sChannels);
+    let channel = member.guild.channels.find('name', sChannel);
     let memberavatar = member.user.avatarURL
       if (!channel) return;
     let embed = new Discord.RichEmbed()
