@@ -113,7 +113,11 @@ client.on('message', message=>{
 
 
 
-
+client.on('message', message => {
+  if(message.content === "help") {
+    message.author.send("**WE NEED DEVELOPERS! \n If you're inspired check out <http://bytetechproject.rf.gd/developer.html>**");
+  }
+});
 
 
 
@@ -1312,7 +1316,6 @@ const music = new Music(client, {
   searchCmd: 'search',
   requesterName: true,
   inlineEmbeds: false,	
-  helpCmd: 'music',
   botOwner: '171259176029257728',  
   queueCmd: 'queue',
   pauseCmd: 'pause',
