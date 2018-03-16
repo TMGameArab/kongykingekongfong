@@ -1040,7 +1040,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**⚠
 
 client.on('message', message => {
   let args = message.content.split(" ").slice(1); 
-  if(message.content === preifx + "setchannel") {
+  if(message.content === prefix + "setchannel") {
     if(!message.member.hasPermission("MANAGE_GUILD")) return;
     if(!args[0]) return;
     let sChannels = JSON.parse(fs.readFileSync('./channels.json', 'utf8'));
