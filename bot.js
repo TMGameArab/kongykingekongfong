@@ -1439,7 +1439,7 @@ client.on('message', msg => {
     }
   });
 
- const zead = [
+ const eztowin = [
    '*** منشن الجميع وقل انا اكرهكم. ***',
 '*** اتصل على امك و قول لها انك تحبها :heart:. ***',
    '***     تصل على الوالده  و تقول لها  احب وحده.***',
@@ -1469,7 +1469,6 @@ client.on('message', msg => {
  if (message.content.startsWith(prefix + 'حكم')) {
   var mariam= new Discord.RichEmbed()
   .setTitle("لعبه حكم")
-  .setTitle("by king-bot")
   .setColor('RANDOM')
   .setDescription(`${zead[Math.floor(Math.random() * zead.length)]}`)
   .setImage("message.author.avatarURL")
