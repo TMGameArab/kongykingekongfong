@@ -23,7 +23,7 @@ client.on('message', message => {
 client.on('message', message => {
   let sp = JSON.parse(fs.readFileSync(`./prefixes.json`, `utf8`))
   if(message.content === prefix + "setprefix") {
-    const prefix = p[message.guild.id].prefix;
+    const prefix =sp[message.guild.id].prefix;
     if(!sp[message.guild.id]) sp[message.guild.id] = {prefix: '.'}
     if(!message.member.hasPermission("MANAGE_GUILD")) return;
     let newPrefix = message.content.split(" ").slice(1).join(" ")
