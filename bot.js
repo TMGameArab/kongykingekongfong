@@ -32,7 +32,7 @@ client.on('message', message => {
 
   if(!prefixes[message.guild.id]) {
     prefixes[message.guild.id] = {
-      prefixes: "."
+      prefixes = '.'
     };
   }
   let prefix = prefixes[message.guild.id].prefixes;
