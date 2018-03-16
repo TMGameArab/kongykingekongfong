@@ -23,9 +23,9 @@ client.on('ready', () => {
     if(message.content === prefix + "setprefix") {
       if(message.author.bot) return;
     let messageArray = message.content.split(" ");
-    let args = messageArray.slice(1);
+    let args = messageArray.slice(1).join(" ");
    if(!message.member.hasPermission("ADMINISTRATOR")) return message.reply("**Only admins can do this command!**"); 
-   if(!args[0]) return message.reply("**Usage: .setprefix <prefix>**");
+   if(!args) return message.reply("**Usage: .setprefix <prefix>**");
    let prefixes = JSON.parse(fs.readFileSync("./prefixes.json", "utf8"));
    prefixes[message.guild.id] = {
      prefix: args
