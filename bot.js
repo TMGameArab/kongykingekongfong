@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const fs = require('fs');
-const prefix = ".";
 const Music = require('discord.js-musicbot-addon');
 client.login(process.env.BOT_TOKEN);
 ///////////////////////////////////////////////////////////////////////////
@@ -24,6 +23,8 @@ client.on('message', message => {
 client.on('message', message => {
   let sp = JSON.parse(fs.readFileSync(`./prefixes.json`, `utf8`))
   if(message.content === prefix + "setprefix") {
+    const prefix = p[message.guild.id].prefix;
+    if(!sp[message.guild.id]) sp[message.guild.id] = {prefix: '.'}
     if(!message.member.hasPermission("MANAGE_GUILD")) return;
     let newPrefix = message.content.split(" ").slice(1).join(" ")
     if(!newPrefix) return message.reply("**.setprefix <prefix>**")
