@@ -470,17 +470,6 @@ message.channel.sendEmbed(embed)
 
 
 
-client.on("channelCreate", (channel) => {
-  if (!channel.guild.channels.find("king","logs")) return;
-    var atacc = new Discord.RichEmbed(atacc);
-    
-    atacc.setColor(RANDOM())
-    atacc.setDescription('The ' + channel + ' ' + `**(` + channel.name + `)**` + ' channel was created')
-    
-    atacc.setAuthor(' CHANNEL CREATED ')
-    channel.guild.channels.find("king","logs").sendEmbed(atacc)
-  
-});
 
 
 
