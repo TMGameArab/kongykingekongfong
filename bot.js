@@ -1309,13 +1309,11 @@ const music = new Music(client, {
   volumeCmd: 'vol',     // Sets the name for the 'volume' command.
   thumbnailType: 'high',
   leaveCmd: 'stop',      // Sets the name for the 'leave' command.
-  anyoneCanSkip: false,
+  anyoneCanSkip: true,
   disableLoop: false,
-  ownerOverMember: true,
   searchCmd: 'search',
   requesterName: true,
-  inlineEmbeds: false,	
-  botOwner: '171259176029257728',  
+  inlineEmbeds: false,	 
   queueCmd: 'queue',
   pauseCmd: 'pause',
   resumeCmd: 'resume',
