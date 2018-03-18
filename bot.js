@@ -193,6 +193,7 @@ if (message.content === prefix + 'help') {
       .addField("**.هل تعلم:video_game:  **","**لـ لعبه هل تعلم**")
       .addField("**.لغز:video_game:  **","**لـ يعطيك لغز في صوره:new: **")
       .addField("**.حكم:video_game:  **","**لـ يعطيك حكم لازم تعمله:new: **")
+      .addField("**.اسرع كتابه:video_game:  **","**لـ يعطيك كلمه صعبه لازم تكتبها سريع:new: **")
 .setColor('RANDOM')
   message.author.sendEmbed(embed);
     }
