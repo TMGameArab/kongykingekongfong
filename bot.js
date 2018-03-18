@@ -1565,11 +1565,7 @@ client.on('message', msg => {
   }
 });
 
-client.on('message', msg => {
-  if (msg.content === 'قعقاع فوق قعقاع'') {
-    msg.reply('**مشالله عليك اسرع واحد تستحق فلوس امزح**');
-  }
-});
+
 
 
 
