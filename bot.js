@@ -7,7 +7,7 @@ client.login(process.env.BOT_TOKEN);
 
 client.on('ready', () => {
     client.user.setActivity("Music!", {type: "LISTENING"});
-      client.log('KingBot Is Running');
+      console.log('KingBot Is Running');
   });
 
 client.on('message', message => {
