@@ -9,32 +9,21 @@ client.on('ready', () => {
     client.user.setActivity("Music!", {type: "LISTENING"});
       console.log('KingBot Is Running');
   });
-
+///////////////////////////////////////////////////////////////
 client.on('message', message => {
    if (message.content === prefix + "roll") {
   message.channel.sendMessage(Math.floor(Math.random() * 100));
-    }
-});
-
-
-client.on('message', message => {
+    } else
   if (message.content === prefix + ('members')) {
     if (message.author.id !== '343383616895713290') return;
-    if(!message.channel.guild) return message.reply('** This command only for servers **');
+    if(!message.channel.guild) return message.reply('** This command only for servers **')
     const embed = new Discord.RichEmbed()
     .setColor('RANDOM')
     .setThumbnail(message.guild.iconURL)
     .addField("👥عدد الاعضــاء سيرفر:",`**${message.guild.memberCount}**`)
     .addField("** :calendar: عدد لأعضاء سيرفرات الى بوت فيها:**", client.users.size)
     message.channel.sendEmbed(embed)
-    
-
-  }
-
-});
-
-
-client.on('message', message => {
+  } else 
   if (message.content === prefix + ('members')) {
     if (message.author.id !== '336606008069849088') return;
     if(!message.channel.guild) return message.reply('** This command only for servers **');
@@ -44,13 +33,7 @@ client.on('message', message => {
     .addField("👥عدد الاعضــاء سيرفر:",`**${message.guild.memberCount}**`)
     .addField("** :calendar: عدد لأعضاء سيرفرات الى بوت فيها:**", client.users.size)
     message.channel.sendEmbed(embed)
-    
-
-  }
-
-});
-
-client.on('message', message => {
+  } else 
     if (message.content.startsWith(".avatar")) {
         var mentionned = message.mentions.users.first();
     var x5bzm;
@@ -64,11 +47,7 @@ client.on('message', message => {
         .setColor("RANDOM")
         .setImage(`${x5bzm.avatarURL}`)
       message.channel.sendEmbed(embed);
-    }
-});
-
-
-client.on('message', msg => {
+    } else 
     if (msg.content ===  prefix + 'colors create'){
               if(!msg.channel.guild) return;
             if (!msg.member.hasPermission('MANAGE_ROLES')) return message.channel.sendMessage("u don't have perms!"); 
@@ -80,14 +59,7 @@ client.on('message', msg => {
             msg.guild.createRole({name:x,
             color: 'RANDOM'})
             }
-          }
-    });
-
-
-    
-
-
-client.on('message', message => {
+          } else
  if (message.content === prefix + 'help') {
          let embed = new Discord.RichEmbed()
 .setThumbnail("https://cdn.pixabay.com/photo/2012/04/02/17/46/signs-25066_960_720.png")    
@@ -98,15 +70,6 @@ client.on('message', message => {
       
 .setColor('RANDOM')
 }
-});
-
-
-
-
-
-
-
-client.on('message', message => {
  if (message.content === prefix + 'help') {
          let embed = new Discord.RichEmbed()
 .setThumbnail("https://cdn1.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/world-circle-blue-128.png")    
@@ -124,11 +87,6 @@ client.on('message', message => {
   message.author.sendEmbed(embed).catch(err => {
    return message.reply("**:no_entry_sign: | !ما يمدينا نرسلك الهلب لأنك مقفل الدايركت**");})
 }
-});
-
-
-
-client.on('message', message => {
  if (message.content === prefix + 'help') {
          let embed = new Discord.RichEmbed()
 .setThumbnail("https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/music-128.png")    
@@ -142,15 +100,6 @@ client.on('message', message => {
 .setColor('RANDOM')
   message.author.sendEmbed(embed);
     }
-});
-   
-
-
-
-
-
-
-client.on('message', message => {
 if (message.content === prefix + 'help') {
          let embed = new Discord.RichEmbed()
 .setThumbnail("https://cdn2.iconfinder.com/data/icons/clean-and-simple/153/Settings-128.png")    
@@ -172,8 +121,6 @@ if (message.content === prefix + 'help') {
 .setColor('RANDOM')
   message.author.sendEmbed(embed);
     }
-});
-client.on('message', message => {
 if (message.content === prefix + 'help') {
          let embed = new Discord.RichEmbed()
 .setThumbnail("https://cdn3.iconfinder.com/data/icons/forall/110/game-128.png")    
@@ -189,9 +136,6 @@ if (message.content === prefix + 'help') {
 .setColor('RANDOM')
   message.author.sendEmbed(embed);
     }
-});
-
-client.on('message', message => {
 if (message.content === prefix + 'help') {
          let embed = new Discord.RichEmbed()
 .setThumbnail("https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/support-128.png") 
