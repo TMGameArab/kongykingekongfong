@@ -1694,5 +1694,9 @@ if (message.content.startsWith(".role ")) {
 
 //test the test
 
-
+client.on('message',msg => {
+  if(msg.content === ".test"){
+    msg.reply("نعم ؟");
+  }
+});
 
