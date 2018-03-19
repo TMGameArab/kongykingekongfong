@@ -80,10 +80,11 @@ message.delete()
 ///
 
 
-client.on('message', message=>{
-    if (message.content ===  prefix + 'colors create'){
-              if(!message.channel.guild) return;
-            if (message.member.hasPermission('MANAGE_ROLES')){
+client.on('message', msg => {
+    if (msg.content ===  prefix + 'colors create'){
+              if(!msg.channel.guild) return;
+            if (!msg.member.hasPermission('MANAGE_ROLES')) return message.channel.sendMessage("u don't have perms!"); 
+            msg.channel.send("**جاري عمل الألوان**").then(msg.edit("**تم عمل الالوان**"))
                 setInterval(function(){})
                   let count = 0;
                   let ecount = 0;
@@ -91,10 +92,8 @@ client.on('message', message=>{
             message.guild.createRole({name:x,
             color: 'RANDOM'})
             }
-            message.channel.sendMessage("**جاري عمل الألوان...**").then(message.edit("**DONE**"))
           }
-    }
-});
+    });
 
 client.on('message', message => {
  if (message.content === prefix + 'help') {
