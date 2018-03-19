@@ -84,7 +84,7 @@ client.on('message', msg => {
     if (msg.content ===  prefix + 'colors create'){
               if(!msg.channel.guild) return;
             if (!msg.member.hasPermission('MANAGE_ROLES')) return message.channel.sendMessage("u don't have perms!"); 
-            msg.channel.send("**جاري عمل الألوان**").then(msg.edit("**تم عمل الالوان**"));
+            msg.channel.send("**:white_check_mark: يتم عمل الالوان**");
                 setInterval(function(){})
                   let count = 0;
                   let ecount = 0;
