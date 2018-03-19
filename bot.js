@@ -1630,7 +1630,7 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-  if (msg.content === 'حب حبحبنا زي حبحبكم') {
+  if (msg.content === 'حب حبحبنا زي حب حبحبكم') {
     msg.reply('**مشالله عليك اسرع واحد تستحق فلوس امزح**');
   }
 });
