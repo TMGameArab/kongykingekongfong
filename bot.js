@@ -48,15 +48,15 @@ client.on('message', message => {
         .setImage(`${x5bzm.avatarURL}`)
       message.channel.sendEmbed(embed);
     } else 
-    if (msg.content === prefix + 'colors create'){
-              if(!msg.channel.guild) return;
-            if (!msg.member.hasPermission('MANAGE_ROLES')) return message.channel.sendMessage("u don't have perms!"); 
-            msg.channel.send("**:white_check_mark: يتم عمل الالوان**");
+    if (message.content ===  prefix + 'colors create'){
+              if(!message.channel.guild) return;
+            if (!message.member.hasPermission('MANAGE_ROLES')) return message.channel.sendMessage("u don't have perms!"); 
+            message.channel.send("**:white_check_mark: يتم عمل الالوان**");
                 setInterval(function(){})
                   let count = 0;
                   let ecount = 0;
         for(let x = 1; x < 141; x++){
-            msg.guild.createRole({name:x,
+          message.guild.createRole({name:x,
             color: 'RANDOM'})
             }
           } else
