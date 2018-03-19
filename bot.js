@@ -10,14 +10,6 @@ client.on('ready', () => {
       console.log('KingBot Is Running');
   });
 
-  //Anti - Advertising
-client.on('message', message => {
-  if(message.member.hasPermission('EMBED_LINKS')) return; 
-  if (message.content.includes('discord.gg' | 'discordapp.com')) {
-    message.delete()
-    return message.reply(`** You aren't allowed to advertise here! :angry: ! **`).then(message => message.delete(5000));}
-});
-
 client.on('message', message => {
    if (message.content === prefix + "roll") {
   message.channel.sendMessage(Math.floor(Math.random() * 100));
