@@ -1528,7 +1528,7 @@ client.on('message', msg => {
 
 
 client.on('message', msg => {
-  if (msg.content === 'كقمـيص نفـيـسـه نشـف') {
+  if (msg.content === 'كقميص نفسيه نشف') {
     msg.reply('**مشالله عليك اسرع واحد**');
   }
 });
@@ -1548,7 +1548,7 @@ client.on('message', msg => {
 
 
 client.on('message', msg => {
-  if (msg.content === 'كحــوش خمـيـس خــوش حــوش') {
+  if (msg.content === `كحوش خميس خوش حوش') {
     msg.reply('**مشالله عليك اسرع واحد تستحق فلوس امزح**');
   }
 });
