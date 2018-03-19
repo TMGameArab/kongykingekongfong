@@ -1686,10 +1686,4 @@ client.on('message', msg => {
 
 
 
-if (message.content.startsWith(prefix + 'setavatar')) {
-if (message.author.id !== '336606008069849088') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
-client.user.setAvatar(argresult);
-    message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
-});
-
 
