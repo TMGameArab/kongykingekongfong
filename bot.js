@@ -1473,39 +1473,14 @@ client.on('message', msg => {
 // wwwwwwwwwwwwwwwwwwww //////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
- const king = [
-     'كقمـيص نفـيـسـه نشـف',
-     'خـيـط حـرير على حـيـط خلـيل',
-     'شـفـتـك شـفـتـنـي ما شـفـتـك شـفـتـنــي',
-     'كم كلمه في كم',
-     'سياره ابي في جيبي',
-     'قعقاع فوق قعقاع',
-     'جو جدة زي جو جيزان',
-     '‏فراش فراس مفروش',
-     'لقمه و جغمه',
-     '‏خط تبوك طويل',
-     '‏طحن دخن',
-     '‏شعبان شبعان',
-     '‏لحم الحمام حلال ولحم الحمار حرام',
-     '‏شـرطي أكل طرشي',
-     '‏حب حبـحبـنا زي حب حبـحبـكم',
-     '‏مالكم تكئكئتم كتكئكئكم البارحة',
-     'د بـاب ما فـرملـنا به و دبـاب فرملـنا به',
-     'أكلت قفص بصل ومصيت قفص قصب',
-     '‏شـفـتـك شـفـتـنـي ما شـفـتـك شـفـتـنــي',
-]
-
- client.on('message', message => {
-   if (message.content.startsWith(".اسرع كتابه")) {
-                if(!message.channel.guild) return message.reply('** This command only for servers**');
-  var embed = new Discord.RichEmbed()
-  .setColor('RANDOM')
-   .setThumbnail(message.author.avatarURL) 
- .addField('لعبه اسرع كتابه' ,
-  `${king[Math.floor(Math.random() * king.length)]}`)
-  message.channel.sendEmbed(embed);
-  console.log('[id] Send By: ' + message.author.username)
-    }
+var asr3 =["https://cdn.discordapp.com/attachments/421588316278751232/425394570168369162/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425394739169329164/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425395072427884584/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425395345997168640/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425395564780322818/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425395888320544771/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425396805547851778/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425397209010405379/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425397361003724830/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425397559557619722/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425397668089561098/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425397785811222538/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425397967525249025/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425398108990472203/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425398237189505024/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425398373114445827/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425398517104902174/unknown.png"]
+client.on('message', message => {
+    var args = message.content.split(" ").slice(1);         
+if(message.content.startsWith(prefix + 'اسرع كتابه')) {
+     var embed = new Discord.RichEmbed()
+.setImage(asr3[Math.floor(Math.random() * asr3.length)])
+message.channel.sendEmbed(embed);
+}
 });
 
 
