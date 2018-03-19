@@ -71,11 +71,10 @@ client.on('message', message => {
 ///Anti-Advertising
 client.on('message', message => {
   if(message.content.includes("discord.gg")){
-if (!message.member.hasPermissions('ADMINISTRATOR')){
+if (message.member.hasPermissions('EMBED_LINKS')) return;
 message.delete()
  return message.reply(`** You aren't allowed to advertise here! :angry: ! **`).then(message => message.delete(5000));
  }
-}
 });
 ///
 
