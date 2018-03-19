@@ -32,7 +32,7 @@ client.on('message', message => {
 });
 
 
-//JWOPJRWOPJWOPEW///
+//qeqfjqwfeqwqfqfewefqeqfqw///
 
 client.on('message', message => {
   if (message.content === prefix + ('members')) {
