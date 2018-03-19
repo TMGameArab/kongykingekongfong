@@ -28,11 +28,11 @@ client.on('message', message => {
     .addField("** :calendar: عدد لأعضاء سيرفرات الى بوت فيها:**", client.users.size)
     message.channel.sendEmbed(embed)
     
-
   }
-
 });
 
+
+//JWOPJRWOPJWOPEW///
 
 client.on('message', message => {
   if (message.content === prefix + ('members')) {
