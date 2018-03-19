@@ -89,7 +89,7 @@ client.on('message', msg => {
                   let count = 0;
                   let ecount = 0;
         for(let x = 1; x < 141; x++){
-            message.guild.createRole({name:x,
+            msg.guild.createRole({name:x,
             color: 'RANDOM'})
             }
           }
