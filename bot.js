@@ -335,8 +335,8 @@ client.on("message", message => {
         if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply("**⚠ | `[MANAGE_ROLES]`لا يوجد لديك صلاحية**").catch(console.error);
   let user = message.mentions.users.first();
   let modlog = client.channels.find('name', 'mute-log');
-  let muteRole = client.guilds.get(message.guild.id).roles.find('name', 'Muted');
-  if (!muteRole) return message.reply("**`'Muted'`لا توجد رتبة** \n  .role Mute لعمل رتبه ميوت اكتب ").catch(console.error);
+  let muteRole = client.guilds.get(message.guild.id).roles.find('name', 'Mute');
+  if (!muteRole) return message.reply("**`'Mute'`لا توجد رتبة** \n  .role Mute لعمل رتبه ميوت اكتب ").catch(console.error);
   if (message.mentions.users.size < 1) return message.reply('**.mute <منشن الشخص> **').catch(console.error);
   
   const embed = new Discord.RichEmbed()
