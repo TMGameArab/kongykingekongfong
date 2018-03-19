@@ -28,11 +28,11 @@ client.on('message', message => {
     .addField("** :calendar: عدد لأعضاء سيرفرات الى بوت فيها:**", client.users.size)
     message.channel.sendEmbed(embed)
     
+
   }
+
 });
 
-
-//qeqfjqwfeqwqfqfewefqeqfqw///
 
 client.on('message', message => {
   if (message.content === prefix + ('members')) {
@@ -94,6 +94,32 @@ client.on('message', msg => {
             }
           }
     });
+
+
+
+
+
+
+
+client.on('message', message => {
+ if (message.content === prefix + 'help') {
+         let embed = new Discord.RichEmbed()
+.setThumbnail("https://cdn.pixabay.com/photo/2012/04/02/17/46/signs-25066_960_720.png")    
+      .addField("**:comet:بوت سريع جدا:**","****")
+      .addField("**:heavy_dollar_sign:مجاني بالكامل:**","****")
+      .addField("**:new:الميزات الحصرية:**","****")
+      .addField("**:arrows_counterclockwise:الصيانة والتطوير المستمر:**","****")
+      
+.setColor('RANDOM')
+  message.author.sendEmbed(embed).catch(err => {
+}
+});
+
+
+
+
+
+
 
 client.on('message', message => {
  if (message.content === prefix + 'help') {
