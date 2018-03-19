@@ -337,6 +337,7 @@ client.on("message", message => {
   let modlog = client.channels.find('name', 'mute-log');
   let muteRole = client.guilds.get(message.guild.id).roles.find('name', 'Muted');
   if (!muteRole) return message.reply("**`'Muted'`لا توجد رتبة** \n Muted سوي رتبة ").catch(console.error);
+ if (!muteRole) return message.reply("لو تبي تعمل رتبه ميوت اكتب\n .role Mute ").catch(console.error);
   if (message.mentions.users.size < 1) return message.reply('**.mute <منشن الشخص> **').catch(console.error);
   
   const embed = new Discord.RichEmbed()
@@ -1665,7 +1666,22 @@ client.on('message', msg => {
 ///////////////////////////////////////////////////////////////////////
 
 
+client.on('message', message => {
 
+if (message.content.startsWith(".role ")) {
+             if(!message.channel.guild) return message.reply('**Commands in the server**');
+        if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply('⚠ **You do not have permissions**');
+        let args = message.content.split(" ").slice(1);
+            message.guild.createRole({
+                name : args.join(' '),
+                color : "RANDOM", 
+                permissions : [1]
+            }).then(function(role){
+                message.addRole(role)
+            })
+
+}
+});
 
 
 
