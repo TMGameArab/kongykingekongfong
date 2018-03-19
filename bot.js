@@ -77,18 +77,8 @@ message.delete()
  }
 }
 });
-//
-client.on('message', function(message) {
-                  if(!message.channel.guild) return;
-    if(message.content ===  '.colors create') {
-        if(message.member.hasPermission('MANAGE_ROLES')) {
-            setInterval(function(){})
-            message.channel.send('جاري عمل الالوان |✅')
-        }else{
-            message.channel.send('ما معاك البرمشن المطلوب  |❌')
-            }
-    }
-});
+///
+
 
 client.on('message', message=>{
     if (message.content ===  prefix + 'colors create'){
@@ -101,19 +91,10 @@ client.on('message', message=>{
             message.guild.createRole({name:x,
             color: 'RANDOM'})
             }
-            }
+            message.channel.sendMessage("**جاري عمل الألوان...**").then(message.edit("**DONE**"))
+          }
     }
 });
-
-
-
-client.on('message', message => {
-  if(message.content === prefix + "help") {
-    message.author.send("**WE NEED DEVELOPERS! \n If you're inspired check out <http://bytetechproject.rf.gd/developer.html>**");
-  }
-});
-
-
 
 client.on('message', message => {
  if (message.content === prefix + 'help') {
