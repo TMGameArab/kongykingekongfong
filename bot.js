@@ -111,7 +111,6 @@ client.on('message', message => {
       .addField("**:arrows_counterclockwise:الصيانة والتطوير المستمر:**","****")
       
 .setColor('RANDOM')
-  message.author.sendEmbed(embed).catch(err => {
 }
 });
 
