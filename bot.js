@@ -336,8 +336,7 @@ client.on("message", message => {
   let user = message.mentions.users.first();
   let modlog = client.channels.find('name', 'mute-log');
   let muteRole = client.guilds.get(message.guild.id).roles.find('name', 'Muted');
-  if (!muteRole) return message.reply("**`'Muted'`لا توجد رتبة** \n Muted سوي رتبة ").catch(console.error);
- if (!muteRole) return message.reply("لو تبي تعمل رتبه ميوت اكتب\n .role Mute ").catch(console.error);
+  if (!muteRole) return message.reply("**`'Muted'`لا توجد رتبة** \n  .role Mute لعمل رتبه ميوت اكتب ").catch(console.error);
   if (message.mentions.users.size < 1) return message.reply('**.mute <منشن الشخص> **').catch(console.error);
   
   const embed = new Discord.RichEmbed()
