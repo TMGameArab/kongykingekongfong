@@ -255,7 +255,6 @@ m.sendMessage(args)
   //////////////////////////////////////////////////////////////////
 
 if(message.content.startsWith(prefix + 'id')) {
-var args = message.content.split(" ").slice(1);
 var year = message.author.createdAt.getFullYear()
 var month = message.author.createdAt.getMonth()
 var day = message.author.createdAt.getDate()
