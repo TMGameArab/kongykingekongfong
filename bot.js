@@ -229,6 +229,7 @@ if (message.content === prefix + 'info') {
   message.author.sendEmbed(embed);
     }
 });
+
 client.on('message', message => {
 if (message.content.startsWith(prefix + 'ping')) {
            if(!message.channel.guild) return;
