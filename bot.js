@@ -48,7 +48,7 @@ client.on('message', message => {
         .setImage(`${x5bzm.avatarURL}`)
       message.channel.sendEmbed(embed);
     } else 
-    if (msg.content ===  prefix + 'colors create'){
+    if (msg.content === prefix + 'colors create'){
               if(!msg.channel.guild) return;
             if (!msg.member.hasPermission('MANAGE_ROLES')) return message.channel.sendMessage("u don't have perms!"); 
             msg.channel.send("**:white_check_mark: يتم عمل الالوان**");
