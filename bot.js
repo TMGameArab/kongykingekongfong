@@ -1535,7 +1535,7 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-  if (msg.content === 'خـيـط حـرير على حـيـط خلـيل') {
+  if (msg.content === 'خيط حرير على حيط خليل') {
     msg.reply('**مشالله عليك اسرع واحد**');
   }
 });
