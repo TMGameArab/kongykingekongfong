@@ -20,18 +20,6 @@ client.on('message', message => {
     }
 });
 
-
-client.on('message', message => {
-if(message.content === prefix + "animu") {
-let args = message.content.split(" ").slice(1).join(" ")
-const mal = new MyAnimeList("KingBotMal", "Abooody88");
-mal.search(`${args}`, "anime")
-    .then(r => console.log(r))
-    .catch(e => console.error(e));
-  }
-});
-
-
 client.on('message', message => {
   if (message.content === prefix + ('members')) {
     if (message.author.id !== '336606008069849088') return;
