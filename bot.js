@@ -1,5 +1,4 @@
 
-//TO DO , ** FIX THIS SHIT FULL OF CLIENT.NO //
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const fs = require('fs');
@@ -53,7 +52,7 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-    if (message.content.startsWith(".avatar")) {
+    if (message.content.startsWith(prefix + "avatar")) {
         var mentionned = message.mentions.users.first();
     var x5bzm;
       if(mentionned){
