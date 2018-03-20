@@ -1647,3 +1647,35 @@ if (message.content.startsWith(".role ")) {
 
 }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    client.on('message', message => {
+        if(message.content === prefix + "le") {
+          const emojiList = message.guild.emojis.map(e=>e.toString()).join(" ");
+          message.channel.send(emojiList);
+        }
+      });
+
+
+
+
+
+
+
+
+
