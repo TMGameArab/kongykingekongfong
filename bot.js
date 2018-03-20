@@ -6,7 +6,7 @@ const Music = require('discord.js-musicbot-addon');
 client.login(process.env.BOT_TOKEN);
 
 client.on('ready', () => {
-    client.user.setActivity("Music!", {type: "LISTENING"});
+    client.user.setActivity(".help > .invite ", {type: "LISTENING"});
       console.log('KingBot Is Running');
   });
 
@@ -118,7 +118,8 @@ client.on('message', message => {
       .addField("**.server :recycle:**","**لـ معلومات السيرفر**")
       .addField("**.servericon :frame_photo: **","**لـ يظهر لك صوره السيرفر**")
       .addField("**.animal :unicorn: **","**لـ صور حيوانات كيوت**")
-      .addField("**.ui :unicorn: **","** لـ يظهر لك اي دي حقك بشكل غير**") 
+      .addField("**.ui :unicorn: **","** لـ يظهر لك اي دي حقك بشكل غير**")
+      .addField("**.le :stopwatch:**","**لـ عرض ايموجي السيرفر:new: **") 
       
 .setColor('RANDOM')
   message.author.sendEmbed(embed).catch(err => {
