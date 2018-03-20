@@ -1314,11 +1314,7 @@ const music = new Music(client, {
 ///////////////////////////////////////////////////////////////////////
 
 
-
-  ////////////////////////////////////////////////////////////////////////////////////////////////
-  ////////////////////////////////////////////////////////////////////////////////////////////////
-  ////////////////////////////////////////////////////////////////////////////////////////////////
-  ///////////////////////////////////////////////////////////////////////////////////////////////
+///FIX HERE ,, V V V V V V
 var kingscc =["https://cdn.discordapp.com/attachments/419823645280436224/423563689954902016/unknown.png","https://cdn.discordapp.com/attachments/419823645280436224/423563233723547658/unknown.png","https://cdn.discordapp.com/attachments/419823645280436224/423562874850508804/unknown.png","https://cdn.discordapp.com/attachments/419823645280436224/423562665026125845/unknown.png","https://cdn.discordapp.com/attachments/419823645280436224/423562493726687253/unknown.png","https://cdn.discordapp.com/attachments/419823645280436224/423562319826518028/unknown.png","https://cdn.discordapp.com/attachments/419823645280436224/423562059167563778/unknown.png","https://cdn.discordapp.com/attachments/419823645280436224/423561747195101186/unknown.png"]
 client.on('message', message => {
     var args = message.content.split(" ").slice(1);         
@@ -1464,17 +1460,6 @@ client.on('message', msg => {
 
 
 
-
-
-
-
-
-
-
-//////////////////////////////////////////////////////////////////////
-// wwwwwwwwwwwwwwwwwwww //////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////
 var asr3 =["https://cdn.discordapp.com/attachments/421588316278751232/425394570168369162/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425394739169329164/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425395072427884584/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425395345997168640/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425395564780322818/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425395888320544771/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425396805547851778/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425397209010405379/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425397361003724830/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425397559557619722/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425397668089561098/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425397785811222538/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425397967525249025/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425398108990472203/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425398237189505024/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425398373114445827/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425398517104902174/unknown.png"]
 client.on('message', message => {
     var args = message.content.split(" ").slice(1);         
@@ -1627,58 +1612,6 @@ client.on('message', msg => {
     msg.reply('**مشالله عليك اسرع واحد تستحق فلوس امزح**');
   }
 });
-
-//////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////
-
-
-client.on('message', message => {
-
-if (message.content.startsWith(".role ")) {
-             if(!message.channel.guild) return message.reply('**Commands in the server**');
-        if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply('⚠ **You do not have permissions**');
-        let args = message.content.split(" ").slice(1);
-            message.guild.createRole({
-                name : args.join(' '),
-                color : "RANDOM", 
-                permissions : [1]
-            }).then(function(role){
-                message.addRole(role)
-            })
-
-}
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    client.on('message', message => {
-        if(message.content === prefix + "le") {
-          const emojiList = message.guild.emojis.map(e=>e.toString()).join(" ");
-          message.channel.send(emojiList);
-        }
-      });
-
-
-
-
-
-
 
 
 
