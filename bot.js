@@ -69,27 +69,6 @@ client.on('message', msg => {
     });
 
 
-    
-
-
-client.on('message', message => {
- if (message.content === prefix + 'help') {
-         let embed = new Discord.RichEmbed()
-.setThumbnail("https://cdn.pixabay.com/photo/2012/04/02/17/46/signs-25066_960_720.png")    
-      .addField("**:comet:بوت سريع جدا:**","****")
-      .addField("**:heavy_dollar_sign:مجاني بالكامل:**","****")
-      .addField("**:new:الميزات الحصرية:**","****")
-      .addField("**:arrows_counterclockwise:الصيانة والتطوير المستمر:**","****")
-      
-.setColor('RANDOM')
-}
-});
-
-
-
-
-
-
 
 client.on('message', message => {
  if (message.content === prefix + 'help') {
