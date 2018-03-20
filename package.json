@@ -10,6 +10,7 @@
     "discord.js": "^11.3.2",
     "discord.js-musicbot-addon": "^1.10.3",
     "fs": "0.0.1-security",
+    "myanimelist.js": "^1.0.0-alpha.7",
     "node-opus": "^0.2.7",
     "opusscript": "0.0.6"
   },

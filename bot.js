@@ -3,8 +3,11 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const fs = require('fs');
 const prefix = ".";
+const MyAnimeList = require("myanimelist.js");
 const Music = require('discord.js-musicbot-addon');
 client.login(process.env.BOT_TOKEN);
+//
+
 
 client.on('ready', () => {
     client.user.setActivity(".help > .invite ", {type: "LISTENING"});
@@ -19,19 +22,13 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-  if (message.content === prefix + ('members')) {
-    if (message.author.id !== '343383616895713290') return;
-    if(!message.channel.guild) return message.reply('** This command only for servers **');
-    const embed = new Discord.RichEmbed()
-    .setColor('RANDOM')
-    .setThumbnail(message.guild.iconURL)
-    .addField("👥عدد الاعضــاء سيرفر:",`**${message.guild.memberCount}**`)
-    .addField("** :calendar: عدد لأعضاء سيرفرات الى بوت فيها:**", client.users.size)
-    message.channel.sendEmbed(embed)
-    
-
+if(message.content === prefix + "animu") {
+let args = message.content.split(" ").slice(1).join(" ")
+const mal = new MyAnimeList("KingBotMal", "Abooody88");
+mal.search(`${args}`, "anime")
+    .then(r => console.log(r))
+    .catch(e => console.error(e));
   }
-
 });
 
 
