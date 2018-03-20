@@ -26,22 +26,9 @@ switch (args[0]) {
         .addField("**:new:الميزات الحصرية:**","****")
         .addField("**:arrows_counterclockwise:الصيانة والتطوير المستمر:**","****")
   .setColor('RANDOM');
-  message.author.sendEmbed(embed1);
-  let embed = new Discord.RichEmbed()
-.setThumbnail("https://cdn1.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/world-circle-blue-128.png")    
-      .addField("**:globe_with_meridians: General**","** **")
-      .addField("**.ping :stopwatch:**","**لـ سرعة إتصالك**")
-      .addField("**.id :chart_with_downwards_trend:**","**يظهر لك اي دي حقك**")
-      .addField("**.avatar :camping:**","**لـ صور الشخص المختار**")
-      .addField("**.roll :1234:**","**لـ القرعه من 1 - 100**")
-      .addField("**.server :recycle:**","**لـ معلومات السيرفر**")
-      .addField("**.servericon :frame_photo: **","**لـ يظهر لك صوره السيرفر**")
-      .addField("**.animal :unicorn: **","**لـ صور حيوانات كيوت**")
-      .addField("**.ui :unicorn: **","** لـ يظهر لك اي دي حقك بشكل غير**")
-      .addField("**.le :bulb: **","**لـ عرض ايموجي السيرفر:new: **") 
-      
-.setColor('RANDOM')
-  message.author.sendEmbed(embed1);
+  message.author.sendEmbed(embed);
+  case "help":
+  message.channel.send("**HELLO!**");
   break;
   //
 }
