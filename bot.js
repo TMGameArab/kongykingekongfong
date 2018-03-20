@@ -28,9 +28,10 @@ switch (args[0]) {
   .setColor('RANDOM');
   message.author.sendEmbed(embed)
   break;
-  case "help": 
-  message.author.sendMessage("**KingBot™**")
+  case "help":
+  message.channel.send("**Done!**");
   break;
+  //
 }
 });
 
