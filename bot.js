@@ -9,7 +9,7 @@ client.login(process.env.BOT_TOKEN);
 
 
 client.on('ready', () => {
-    client.user.setActivity(".help > .invite ", {type: "LISTENING"});
+    client.user.setActivity("Hi ", {type: "LISTENING"});
       console.log('KingBot Is Running');
   });
 
