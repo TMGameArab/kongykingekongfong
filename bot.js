@@ -5,13 +5,37 @@ const fs = require('fs');
 const prefix = ".";
 const Music = require('discord.js-musicbot-addon');
 client.login(process.env.BOT_TOKEN);
-//
+/////////////////////////////////////////////////
 
 
 client.on('ready', () => {
     client.user.setActivity(".help > .invite ", {type: "LISTENING"});
       console.log('KingBot Is Running');
   });
+  //+ STARTING NEW PROGRAMMING STYLE +//
+client.on('message', message => {
+if(message.author.bot) return;
+if(!message.content.startsWith(prefix)) return;
+var args = message.content.substring(prefix.length).split(" ");
+switch (args[0]) {
+  case "help":
+  let embed = new Discord.RichEmbed()
+  .setThumbnail("https://cdn.pixabay.com/photo/2012/04/02/17/46/signs-25066_960_720.png")    
+        .addField("**:comet:بوت سريع جدا:**","****")
+        .addField("**:heavy_dollar_sign:مجاني بالكامل:**","****")
+        .addField("**:new:الميزات الحصرية:**","****")
+        .addField("**:arrows_counterclockwise:الصيانة والتطوير المستمر:**","****")
+  .setColor('RANDOM');
+  message.author.sendEmbed(embed)
+  break;
+  case "help": 
+  message.author.sendMessage("**KingBot™**")
+  break;
+}
+});
+
+/////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
 
 client.on('message', message => {
    if (message.content === prefix + "roll") {
@@ -67,28 +91,6 @@ client.on('message', msg => {
             }
           }
     });
-
-
-    
-
-
-client.on('message', message => {
- if (message.content === prefix + 'help') {
-         let embed = new Discord.RichEmbed()
-.setThumbnail("https://cdn.pixabay.com/photo/2012/04/02/17/46/signs-25066_960_720.png")    
-      .addField("**:comet:بوت سريع جدا:**","****")
-      .addField("**:heavy_dollar_sign:مجاني بالكامل:**","****")
-      .addField("**:new:الميزات الحصرية:**","****")
-      .addField("**:arrows_counterclockwise:الصيانة والتطوير المستمر:**","****")
-      
-.setColor('RANDOM')
-}
-});
-
-
-
-
-
 
 
 client.on('message', message => {
