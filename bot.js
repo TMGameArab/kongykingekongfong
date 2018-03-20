@@ -41,7 +41,7 @@ switch (args[0]) {
       .addField("**.le :bulb: **","**لـ عرض ايموجي السيرفر:new: **") 
       
 .setColor('RANDOM')
-  message.author.sendEmbed(embed1)
+  message.author.sendEmbed(embed1);
   break;
   //
 }
