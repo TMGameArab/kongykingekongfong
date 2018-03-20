@@ -3,7 +3,6 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const fs = require('fs');
 const prefix = ".";
-const MyAnimeList = require("myanimelist.js");
 const Music = require('discord.js-musicbot-addon');
 client.login(process.env.BOT_TOKEN);
 //
@@ -19,18 +18,6 @@ client.on('message', message => {
   message.channel.sendMessage(Math.floor(Math.random() * 100));
     }
 });
-
-
-client.on('message', message => {
-if(message.content === prefix + "animu") {
-let args = message.content.split(" ").slice(1).join(" ")
-const mal = new MyAnimeList("KingBotMal", "Abooody88");
-mal.search(`${args}`, "anime")
-    .then(r => console.log(r))
-    .catch(e => console.error(e));
-  }
-});
-
 
 client.on('message', message => {
   if (message.content === prefix + ('members')) {
