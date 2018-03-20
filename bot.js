@@ -1,3 +1,5 @@
+
+//TO DO , ** FIX THIS SHIT FULL OF CLIENT.NO //
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const fs = require('fs');
