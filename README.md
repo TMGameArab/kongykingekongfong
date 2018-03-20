@@ -1,7 +1,3 @@
-# ByteTech
---Bot Awesomeness!
-
-
 # To Do List 
 [* = Very Improtant]
 
