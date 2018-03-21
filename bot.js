@@ -1619,7 +1619,6 @@ message.channel.sendEmbed(embed);
 
 
 
-});
 
 
 
