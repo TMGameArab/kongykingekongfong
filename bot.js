@@ -9,7 +9,7 @@ client.login(process.env.BOT_TOKEN);
 
 
 client.on('ready', () => {
-    client.user.setActivity("Hi ", {type: "LISTENING"});
+    client.user.setActivity("V2 Coming", {type: "LISTENING"});
       console.log('KingBot Is Running');
   });
 
@@ -1277,7 +1277,7 @@ const music = new Music(client, {
 ///////////////////////////////////////////////////////////////////////
 
 
-///FIX HERE ,, V V V V V V
+//  NEED FIXES
 var kingscc =["https://cdn.discordapp.com/attachments/419823645280436224/423563689954902016/unknown.png","https://cdn.discordapp.com/attachments/419823645280436224/423563233723547658/unknown.png","https://cdn.discordapp.com/attachments/419823645280436224/423562874850508804/unknown.png","https://cdn.discordapp.com/attachments/419823645280436224/423562665026125845/unknown.png","https://cdn.discordapp.com/attachments/419823645280436224/423562493726687253/unknown.png","https://cdn.discordapp.com/attachments/419823645280436224/423562319826518028/unknown.png","https://cdn.discordapp.com/attachments/419823645280436224/423562059167563778/unknown.png","https://cdn.discordapp.com/attachments/419823645280436224/423561747195101186/unknown.png"]
 client.on('message', message => {
     var args = message.content.split(" ").slice(1);         
@@ -1379,6 +1379,7 @@ client.on('message', msg => {
       msg.reply('**اجابه صحيحه**');
     }
   });
+  //  NEED FIXES
 
  const scc = [
    '*** منشن الجميع وقل انا اكرهكم. ***',
@@ -1419,7 +1420,7 @@ client.on('message', msg => {
 
 
 
-
+//  NEED FIXES
 
 
 
@@ -1432,7 +1433,6 @@ if(message.content.startsWith(prefix + 'اسرع كتابه')) {
 message.channel.sendEmbed(embed);
 }
 });
-
 
 
 
@@ -1575,40 +1575,6 @@ client.on('message', msg => {
     msg.reply('**مشالله عليك اسرع واحد تستحق فلوس امزح**');
   }
 });
-
-
-
-client.on('message', message => {
-      if(message.content === prefix + "le") {
-        const emojiList = message.guild.emojis.map(e=>e.toString()).join(" ");
-        message.channel.send(emojiList);
-      }
-    });
-
-
-
-client.on('message', message => {
-if(message.author.bot) return; 
-if (message.content.startsWith(prefix + "sug")) {
-if (!message.channel.guild) return;
-let args = message.content.split(" ").slice(1).join(' ');
-if(!args) return message.reply("**.contact <الرسالة>**");
-client.users.get("171259176029257728").send(
-    "\n" + "**" + "● السيرفر :" + "**" +
-    "\n" + "**" + "» " + message.guild.name + "**" +
-    "\n" + "**" + " ● المرسل : " + "**" +
-    "\n" + "**" + "» " + message.author.tag + "**" +
-    "\n" + "**" + " ● الرسالة : " + "**" +
-    "\n" + "**" + args + "**")
-
-let embed = new Discord.RichEmbed()
-.setDescription(':mailbox_with_mail: تم ارسال لاقتراح شكرا')
-.setFooter(message.author.username, message.author.avatarURL)
-message.channel.sendEmbed(embed);
-
-}
-});
-
 
 
 
