@@ -181,16 +181,26 @@ client.on('message', message => {
 if (message.content === prefix + 'help') {
          let embed = new Discord.RichEmbed()
 .setThumbnail("https://cdn2.iconfinder.com/data/icons/circle-icons-1/64/support-128.png") 
-	 .addField("**:diamond_shape_with_a_dot_inside: Support ™ **","** **")
+	 .addField("**:diamond_shape_with_a_dot_inside: Informations ™ **","** **")
 	 .addField("**موقع البوت **","**http://bytetechproject.rf.gd/**")
 	 .addField("**موقع دعوة البوت**","**http://bytetechproject.rf.gd/invite**")
-	 .addField("**لو تبي ترسل لنا رساله **","**.contact <رسالتك>**")
-      .addField("** مبرمجين البوت :wrench: **","** ByteTech™ » Spyro KingMas Abady FoxMCAdmin **")
+      .addField("** مبرمجين البوت :wrench: **","** ByteTech™ » Spyro KingMAS Abady FoxMCAdmin **")
        .setColor('RANDOM')
   message.author.sendEmbed(embed);
     }
 });
 
+client.on('message', message => {
+if (message.content === prefix + 'help') {
+         let embed = new Discord.RichEmbed()
+.setThumbnail("https://i.imgur.com/Z88EcG3.jpg") 
+	 .addField("**:diamond_shape_with_a_dot_inside: Support ™ **","** **")
+         .addField("** :name_badge: للاستفسار و مساعدة**","**https://discord.gg/jQ9nRAu **") 
+	 .addField("**لو تبي ترسل لنا رساله **","**.contact <رسالتك>**")
+       .setColor('RANDOM')
+  message.author.sendEmbed(embed);
+    }
+});
 
 
 client.on('message', message => {
