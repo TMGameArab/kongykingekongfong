@@ -1595,3 +1595,93 @@ client.on('message', msg => {
     msg.reply('**مشالله عليك اسرع واحد تستحق فلوس امزح**');
   }
 });
+
+
+ client.on("guildCreate", guild => {
+    let embed = new Discord.RichEmbed () 
+    .setTitle('Bot Logs')
+    .addField(' ***Bot joined to :***[' + `${guild.name}` + ']   **By : **' + `${guild.owner.user.username}` + '')
+    .setFooter('The bot is happy')
+    .setTimestamp()
+    client.channels.get("425700124623241222").send(embed)
+  });
+
+  client.on("guildDelete", guild => {
+  let embed = new Discord.RichEmbed ()
+  .setTitle('Bot Logs')
+  .addField(' ***Bot left from :***[' + `${guild.name}` + ']     **By : **' + `${guild.owner.user.username}` +  ' ')
+  .setFooter('The bot is crying')
+  .setTimestamp()
+  client.channels.get("425700124623241222").send(embed)
+});
+
+
+
+
+
+
+        client.on('message', message => {
+            if (message.content.startsWith(prefix + "uptime")) {
+                let uptime = client.uptime;
+            
+                let days = 0;
+                let hours = 0;
+                let minutes = 0;
+                let seconds = 0;
+                let notCompleted = true;
+            
+                while (notCompleted) {
+            
+                    if (uptime >= 8.64e+7) {
+            
+                        days++;
+                        uptime -= 8.64e+7;
+            
+                    } else if (uptime >= 3.6e+6) {
+            
+                        hours++;
+                        uptime -= 3.6e+6;
+            
+                    } else if (uptime >= 60000) {
+            
+                        minutes++;
+                        uptime -= 60000;
+            
+                    } else if (uptime >= 1000) {
+                        seconds++;
+                        uptime -= 1000;
+            
+                    }
+            
+                    if (uptime < 1000)  notCompleted = false;
+            
+                }
+               
+
+                const embed = new Discord.RichEmbed()
+                .setColor('RANDOM')
+                .addField("The bot have been working for : ", "`" + `${days} days, ${hours} hrs, ${minutes} min , ${seconds} sec` + "`")
+                .setFooter('requested by: ' + message.author.tag)
+                .setTimestamp()
+                message.channel.sendEmbed(embed)
+            
+            }
+            });
+
+
+
+
+     var coinflip =["https://i.imgur.com/ounEiyN.png", "https://i.imgur.com/xUwvSde.png"]
+     client.on('message', message => {
+         var args = message.content.split(" ").slice(1);         
+     if(message.content.startsWith(prefix + 'coinflip')) {
+          var embed = new Discord.RichEmbed()
+ .setImage(coinflip[Math.floor(Math.random() * coinflip.length)])
+ message.channel.sendEmbed(embed);
+     }
+ });
+
+
+
+
+
