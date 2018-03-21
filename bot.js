@@ -1609,3 +1609,52 @@ message.channel.sendEmbed(embed);
 }
 });
 
+
+
+
+
+
+
+
+
+
+client.on('message', msg => {
+if (msg.startsWith(prefix + '.cealer')) {
+  async function purge() {
+    msga.delete();
+
+      if (!msg.member.hasPermission('MANAGE_MESSAGE')) {
+          msga.channel.send('You need the \`MANAGE_MESSAGE\` permissions to use this command')
+        return;
+      }
+
+    if (isNaN(args[0])) {
+      msg.channel.send('Please use a number as your arguments. \n Usage: ' + prefix + 'clear <amount>');
+        return;
+    }
+
+    const fetched = await msg.channel.fetcMessages({limit: args[0]});
+    console.log(fetched.size + ' messages found, deleting....');
+
+    //Deleting the messages
+    msg.channel.bulkDelete(fetched)
+    .catch(error => msg.channel.send(`Error: ${error}`));
+
+  }
+  purge();
+}
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
