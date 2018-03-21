@@ -104,7 +104,6 @@ client.on('message', message => {
       .addField("**.servericon :frame_photo: **","**لـ يظهر لك صوره السيرفر**")
       .addField("**.animal :unicorn: **","**لـ صور حيوانات كيوت**")
       .addField("**.ui :unicorn: **","** لـ يظهر لك اي دي حقك بشكل غير**")
-      .addField("**.le :bulb: **","**لـ عرض ايموجي السيرفر:new: **") 
       
 .setColor('RANDOM')
   message.author.sendEmbed(embed).catch(err => {
@@ -1284,7 +1283,7 @@ message.channel.sendEmbed(embed);
 client.on('message', message => {
   if(message.content.startsWith(prefix + "suggest")) {
     if (message.guild.id !== '418812093349888003') return;
-        if (message.channel.id !== '419483633792057355') return;
+if (message.channel.id !== '419483633792057355') return message.reply("**<#419483633792057355> روح لروم **")
 	  message.delete()
     let args = message.content.split(" ").slice(1).join(' ');
     
