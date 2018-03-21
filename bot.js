@@ -460,8 +460,8 @@ message.channel.sendEmbed(embed)
     .setColor(0x164fe3)
     .setImage(message.guild.iconURL)
     .setURL(message.guild.iconrURL)
-                    .setTimestamp()
-
+                    .setFooter(message.author.username, message.author.avatarURL)
+    .setTimestamp()
    message.channel.send({embed});
       }
   });
