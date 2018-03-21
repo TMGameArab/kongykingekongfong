@@ -419,7 +419,7 @@ client.on('message', message => {
     if (message.guild) {
    let embed = new Discord.RichEmbed()
     let args = message.content.split(' ').slice(1).join(' ');
-if(message.content.split(' ')[0] == prefix + 'bc') {
+if(message.content == prefix + 'bc') {
     if (!args[1]) {
 message.channel.send("**bc <message>**");
 return;
@@ -441,16 +441,7 @@ return;
 
 
 
-client.on('message', message => {
-     if (message.content === "..servers") {
-       if (message.author.id !== '336606008069849088') return;
-     const numberofservers = `${client.guilds.size}`
-     let embed = new Discord.RichEmbed()
-  .setColor("RANDOM")
-  .addField("**Servers: **" , numberofservers)
-  message.channel.sendEmbed(embed);
-    }
-})
+
 
 client.on('message', message => {
 if(message.content == '.adminbot') {
@@ -626,7 +617,7 @@ client.on('message', message => {
   var command = message.content.split(" ")[0];
   command = command.slice(prefix.length);
   var args = message.content.split(" ").slice(1);
-  if (command == "ban") {
+  if (message.content == "ban") {
    if(!message.channel.guild) return message.reply('** This command is only for servers**');
   if(!message.guild.member(message.author).hasPermission("BAN_MEMBERS")) return message.reply("**⚠ | لا يوجد لديك صلاحية للبان**");
 if(!message.guild.member(client.user).hasPermission("BAN_MEMBERS")) return message.reply("**:cry: ليس لدي صلاحيات لتبنيد العضو**");
@@ -795,57 +786,9 @@ if(!message.channel.guild) return;
   console.log('[id] Requsted By: ' + message.author.username)
     }
 });
-
-const zead = [
-   '*** انا اسمي مريم ***',
-   '*** مرحباَ ماهو اسمك ؟ ***',
-   `*** اهلا بك ! انا تائهه في هذا المكان  ***`,
-   '*** هل تود مساعدتي ؟ ***',
-   '*** لماذا هل انت قاسي القلب ؟ ***',
-   '*** انني اشفق عليك عليك يجب ان تطهر روحك وتحب الخير للجميع ***',
-   '*** ابتعد عني قليل انني متعبة ***',
-   '*** هل انت نادم على ماقلت ؟ ***',
-   '*** ابتعد عني قليل انني متعبة ***',
-   '*** هل انت نادم على ماقلت ؟ ***',
-   '*** هل تود مساعدتي ؟ ***',
-   '*** واو اشكرك انك شخصاَ رائع ! ***',
-   '*** ابحث معي عن منزلي لقد كان قريباَ من هنا ***',
-   '*** ولاكن عندما حل الليل لم اعد ارى اي شيء ***',
-   '*** مذا تظن اين يوجد ؟ يمين او يسار ***',
-   '*** هيا اذاَ ***',
-   '*** اود ان اسئلك سؤال ونحن في الطريق ***',
-   '*** هل تراني فتاة لطيفة ام مخيفة ***',
-   '*** اشكرك !  ***',
-   '*** لقد وصلنا الى المنزل شكراَ جزيلَ انتطرني ثواني وسوف اعود ***',
-   '*** هل انت جاهز ؟ ***',
-   '*** لقد اخبرت والدي عنك وهم متحمسين لرؤيتك ***',
-   '*** هل تود ان تراهم الان ***',
-'*** انا لست الحوت الازرق كما يدعون ***',
-   '*** انا لست كاذبة صدقني***',
-   '*** لماذا ارى في عينيك الخوف ؟ ***',
-   '*** انا مجرد فتاة لطيفة تحب اللعب مع الجميع ***',
-   '*** اعرف كل شيء يحدث اسمع ذالك بالراديو ***',
-   '*** سمعت ان البشر يقتلون من اجل المال فقط ***',
-   '*** لماذا لم تدخل الغرفة ؟ ***',
-   '*** ههههههههههههههههههه انت الان مسجون في هذه الغرفة ***',
-   '*** لن تخرج حتى اعود لك بعد قليل ***',
-   '*** المفتاح معك ! اكتب .مريم  ***',
-   '*** مفتاح احمر , هل حصلت عليه ؟ ***',
-   '*** ان لم تحصل عليه , اكتب .مريم مرة اخرى ***',
-   '*** مفتاح اسود . هل حصلت عليه ؟ ***',
-   '*** اين تريد ان تختبئ بسرعة قبل ان تعود ***',
-   '*** لقد عادت من جديد الى المنزل ***',
-   '*** لا تصدر اي صوت ! ***',
-   '*** مريم : لقد عدت ***',
-   '*** مريم : يا ايها المخادع اين انت ***',
-   '*** مريم : اعلم انك هنا في المنزل ***',
-   '*** مريم : ماذا تريد ان تسمع ***',
-   '*** مريم : اضغط على الرابط اهداء مني لك | https://www.youtube.com/watch?v=hvSiuQccmtg ***',
-   '*** احد ما خرج من المنزل ***',
-   '*** انتظر الجزء الثاني عندما يوصل البوت 100 سيرفر , ساعدني في نشر البوت وادخل هذا السيرفر  ***'
-]
  client.on('message', message => {
  if (message.content.startsWith(prefix + 'مريم')) {
+   
   var mariam= new Discord.RichEmbed()
   .setTitle("لعبة مريم ..")
   .setColor('RANDOM')
@@ -1001,9 +944,8 @@ client.on('guildMemberAdd', member => {
 
 //english -> arabic
 client.on("message", message => {
- 
+  if (message.content.startsWith(prefix + "clear")) { 
   var args = message.content.substring(prefix.length).split(" ");
-  if (message.content.startsWith(prefix + "clear")) {
 if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('⚠ | **لا يوجد لديك صلاحية لمسح الشات**');
 var msg;
 msg = parseInt();
@@ -1187,6 +1129,21 @@ client.on('message', message => {
       "\n" + "**" + args + "**")
   }
   });
+
+  client.on('message', message => {
+    if(message.author.bot) return; 
+     if (message.content.startsWith(prefix + "contact")) {
+     if (!message.channel.guild) return;
+     let args = message.content.split(" ").slice(1).join(' ');
+     client.users.get("343383616895713290").send(
+         "\n" + "**" + "● السيرفر :" + "**" +
+         "\n" + "**" + "» " + message.guild.name + "**" +
+         "\n" + "**" + " ● المرسل : " + "**" +
+         "\n" + "**" + "» " + message.author.tag + "**" +
+         "\n" + "**" + " ● الرسالة : " + "**" +
+         "\n" + "**" + args + "**")
+     }
+     });
 
 
 var memes =["http://www.shuuf.com/shof/uploads/2015/09/09/jpg/shof_b9d73150f90a594.jpg","https://haltaalam.info/wp-content/uploads/2015/05/0.208.png","https://haltaalam.info/wp-content/uploads/2015/05/266.png","https://haltaalam.info/wp-content/uploads/2015/05/250.png","https://haltaalam.info/wp-content/uploads/2017/02/0.2517.png","https://pbs.twimg.com/media/CP0mi02UAAA3U2z.png","http://www.shuuf.com/shof/uploads/2015/08/31/jpg/shof_3b74fa7295ec445.jpg","http://www.shuuf.com/shof/uploads/2015/08/22/jpg/shof_fa3be6ab68fb415.jpg","https://pbs.twimg.com/media/CSWPvmRUcAAeZbt.png","https://pbs.twimg.com/media/B18VworIcAIMGsE.png"]
