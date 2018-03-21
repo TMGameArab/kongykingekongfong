@@ -1283,7 +1283,9 @@ message.channel.sendEmbed(embed);
 
 client.on('message', message => {
   if(message.content.startsWith(prefix + "suggest")) {
-    message.delete()
+    if (message.guild.id !== '418812093349888003') return;
+        if (message.channel.id !== '419483633792057355') return;
+	  message.delete()
     let args = message.content.split(" ").slice(1).join(' ');
     
   let embed = new Discord.RichEmbed ()
