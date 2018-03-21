@@ -164,6 +164,7 @@ if (message.content === prefix + 'help') {
 	 .addField("**موقع البوت **","**http://bytetechproject.rf.gd/**")
 	 .addField("**موقع دعوة البوت**","**http://bytetechproject.rf.gd/invite**")
 	 .addField("**لو تبي ترسل لنا رساله **","**.contact <رسالتك>**")
+         .addField("**لو حاب ترسل لنا اقتراح **","**.sug <اقتراحك>**")
       .addField("** مبرمجين البوت :wrench: **","** ByteTech™ » <@171259176029257728> <@343383616895713290> <@315477177028050945> <@336606008069849088> **")
        .setColor('RANDOM')
   message.author.sendEmbed(embed);
@@ -1576,4 +1577,35 @@ client.on('message', msg => {
 });
 
 
+
+client.on('message', message => {
+      if(message.content === prefix + "le") {
+        const emojiList = message.guild.emojis.map(e=>e.toString()).join(" ");
+        message.channel.send(emojiList);
+      }
+    });
+
+
+
+client.on('message', message => {
+if(message.author.bot) return; 
+if (message.content.startsWith(prefix + "sug")) {
+if (!message.channel.guild) return;
+let args = message.content.split(" ").slice(1).join(' ');
+if(!args) return message.reply("**.contact <الرسالة>**");
+client.users.get("171259176029257728").send(
+    "\n" + "**" + "● السيرفر :" + "**" +
+    "\n" + "**" + "» " + message.guild.name + "**" +
+    "\n" + "**" + " ● المرسل : " + "**" +
+    "\n" + "**" + "» " + message.author.tag + "**" +
+    "\n" + "**" + " ● الرسالة : " + "**" +
+    "\n" + "**" + args + "**")
+
+let embed = new Discord.RichEmbed()
+.setDescription(':mailbox_with_mail: تم ارسال لاقتراح شكرا')
+.setFooter(message.author.username, message.author.avatarURL)
+message.channel.sendEmbed(embed);
+
+}
+});
 
