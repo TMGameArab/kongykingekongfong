@@ -1232,6 +1232,30 @@ message.channel.sendEmbed(embed);
 
 
 client.on('message', message => {
+if(message.author.bot) return; 
+if (message.content.startsWith(prefix + "contact")) {
+if (!message.channel.guild) return;
+let args = message.content.split(" ").slice(1).join(' ');
+if(!args) return message.reply("**.contact <الرسالة>**");
+client.users.get("343383616895713290").send(
+    "\n" + "**" + "● السيرفر :" + "**" +
+    "\n" + "**" + "» " + message.guild.name + "**" +
+    "\n" + "**" + " ● المرسل : " + "**" +
+    "\n" + "**" + "» " + message.author.tag + "**" +
+    "\n" + "**" + " ● الرسالة : " + "**" +
+    "\n" + "**" + args + "**")
+
+let embed = new Discord.RichEmbed()
+.setDescription(':mailbox_with_mail: تم إرسال الرسالة')
+.setFooter(message.author.username, message.author.avatarURL)
+message.channel.sendEmbed(embed);
+
+}
+});
+
+
+
+client.on('message', message => {
  if(message.author.bot) return; 
   if (message.content.startsWith(prefix + "contact")) {
   if (!message.channel.guild) return;
