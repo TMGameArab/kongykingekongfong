@@ -28,20 +28,19 @@ client.on('message', message => {
     var argresult = args.join(` `);
         if (message.author.id !== devs) return;
   
-  
-  if (message.content.startsWith(prefix + 'ply')) {
+  if (message.content === '.ply') {
     client.user.setGame(argresult);
       message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
   } else 
-  if (message.content.startsWith(prefix + 'wt')) {
+  if (message.content === 'wt') {
   client.user.setActivity(argresult, {type:'WATCHING'});
       message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
   } else 
-  if (message.content.startsWith(prefix + 'ls')) {
+  if (message.content === 'ls') {
   client.user.setActivity(argresult , {type:'LISTENING'});
       message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
   } else 
-  if (message.content.startsWith(prefix + 'st')) {
+  if (message.content === 'st') {
     client.user.setGame(argresult, "https://www.twitch.tv/idk");
       message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
   }
