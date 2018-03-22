@@ -291,7 +291,6 @@ message.author.sendEmbed(embed);
         if (!args[1]) {
     message.channel.send("**bc <message>**");
     return;
-    message.channel.send("**:loudspeaker: | يتم إرسال البرودكسات")
     }
             message.guild.members.forEach(m => {
                 var bc = new Discord.RichEmbed()
@@ -302,6 +301,7 @@ message.author.sendEmbed(embed);
                 // m.send(`[${m}]`);
                 m.send({embed: bc});
             });
+            message.channel.send("**:loudspeaker: | يتم إرسال البرودكسات");
         }
         }
 
