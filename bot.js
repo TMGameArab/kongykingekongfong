@@ -50,25 +50,6 @@ client.on('message', message => {
 
 
 /////////// G U I L D - C O M M A N D S /////////////////////////////
-client.on('guildMemberAdd', member => {
-    let channel = member.guild.channels.find('name', 'welcome');
-    let memberavatar = member.user.avatarURL
-      if (!channel) return;
-    let embed = new Discord.RichEmbed()
-        .setColor('RANDOM')
-        .setThumbnail(memberavatar)
-        .addField(':new_moon_with_face: | name :  ',`${member}`)
-        .addField(':loudspeaker: |  نورت السيرفر يا قلبي' , `Welcome to the server, ${member}`)
-        .addField(':id: | user :', "**[" + `${member.id}` + "]**" )
-                .addField('➡| انت العضو رقم',`${member.guild.memberCount}`)
-          .addField(' الـسيرفر', `${member.guild.name}`,true)
-                                       
-     .setFooter(`${member.guild.name}`)
-        .setTimestamp()
-   
-      channel.sendEmbed(embed);
-                   
-    });
 /////////// G U I L D - C O M M A N D S /////////////////////////////
 
 //////////////////// M U S I C - C O M M A N D S ////////////////////
