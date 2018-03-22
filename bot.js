@@ -2,6 +2,7 @@ const config = require("./config.json");
 const Discord = require("discord.js");
 const fs = require('fs');
 const client = new Discord.Client({disableEveryone: true});
+const devs = ['336606008069849088' , '315477177028050945' , '171259176029257728' , '343383616895713290'];
 const Music = require('discord.js-musicbot-addon');
 client.login(process.env.BOT_TOKEN);
 
@@ -12,9 +13,9 @@ client.on('ready', ()  => {
 /////////// A D M I N - C O M M A N D S [PREFIX DOESN'T WORK HERE !!!!!!!!!!!!!!!!!!]/
 client.on('message', message => {
 if (message.content === '.globalbc' ){
-    if(!message.channel.guild) return;
-  if(message.author.id !== devs[devs.length]) return;
-  let args = message.content.split(' ').slice(1).join(' ');
+if(!message.channel.guild) return;
+if(!devs.includes(message.author.id)) return; 
+let args = message.content.split(' ').slice(1).join(' ');
   message.channel.sendMessage(':incoming_envelope: ➤ **Sending to ' + `${client.users.size} users...**`);
   client.users.forEach(m =>{
   m.sendMessage(args)
@@ -23,11 +24,9 @@ if (message.content === '.globalbc' ){
 });
 
 client.on('message', message => {
-    const devs = ['336606008069849088' , '315477177028050945' , '171259176029257728' , '343383616895713290']
+    if(!devs.includes(message.author.id)) return; 
     var args = message.content.split(` `).slice(1);
     var argresult = args.join(` `);
-    if(!devs.includes(message.author.id)) return; 
-
   if (message.content === '.ply') {
     client.user.setGame(argresult);
       message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
