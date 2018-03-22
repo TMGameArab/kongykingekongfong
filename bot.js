@@ -139,7 +139,7 @@ message.edit(`**Time Taken :ping_pong:** \`${Date.now() - message.createdTimesta
      .addField("**.server :recycle:**","**لـ معلومات السيرفر**")
      .addField("**.icon :frame_photo: **","**لـ يظهر لك صوره السيرفر**")
      .addField("**.animal :unicorn: **","**لـ صور حيوانات كيوت**")
-     .addField("**.ui :unicorn: **","** لـ يظهر لك اي دي حقك بشكل غير**")
+     .addField("**.emojis :unicorn: **","** لـيظهر لك كل اموجي حقت سيرفر**")
      
 .setColor('RANDOM')
  message.author.sendEmbed(embed).catch(err => {
@@ -602,7 +602,7 @@ message.author.sendEmbed(embed);
 
 
 
-                        if(message.content === prefix + "listemojis") {
+                        if(message.content === prefix + "emojis") {
                           const emojiList = message.guild.emojis.map(e=>e.toString()).join(" ");
                           message.channel.send(emojiList);
                         }
