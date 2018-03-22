@@ -1,6 +1,7 @@
 const config = require("./config.json");
 const Discord = require("discord.js");
 const fs = require('fs');
+const adminprefix = ".";
 const client = new Discord.Client({disableEveryone: true});
 const devs = ['336606008069849088' , '315477177028050945' , '171259176029257728' , '343383616895713290'];
 const Music = require('discord.js-musicbot-addon');
@@ -12,7 +13,7 @@ client.on('ready', ()  => {
 });
 /////////// A D M I N - C O M M A N D S [PREFIX DOESN'T WORK HERE !!!!!!!!!!!!!!!!!!]/
 client.on('message', message => {
-if (message.content === '.' + 'globalbc' ){
+if (message.content.startsWith(adminprefix + 'globalbc' )){
 if(!message.channel.guild) return;
 if(!devs.includes(message.author.id)) return; 
 let args = message.content.split(' ').slice(1).join(' ');
@@ -22,29 +23,30 @@ let args = message.content.split(' ').slice(1).join(' ');
   });
   }
 });
+
 client.on('message', message => {
-    if(!devs.includes(message.author.id)) return; 
-    var args = message.content.split(` `).slice(1);
-    var argresult = args.join(` `);
-  if (message.content === '.' + 'ply') {
-    client.user.setGame(argresult);
+    var argresult = message.content.split(` `).join(' ');
+      if (!devs.includes(message.author.id)) return;
+      
+  if (message.content.startsWith(adminprefix + 'ply')) {
+    client.user.setGame(argresult[0]);
       message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
   } else 
-  if (message.content === '.' + 'wt') {
-  client.user.setActivity(argresult, {type:'WATCHING'});
+  if (message.content.startsWith(adminprefix + 'wt')) {
+  client.user.setActivity(argresult[0] , {type:'WATCHING'});
       message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
   } else 
-  if (message.content === '.' + '.ls') {
+  if (message.content.startsWith(adminprefix + 'ls')) {
   client.user.setActivity(argresult , {type:'LISTENING'});
       message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
   } else 
-  if (message.content === '.' + '.st') {
+  if (message.content.startsWith(adminprefix + 'st')) {
     client.user.setGame(argresult, "https://www.twitch.tv/idk");
       message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
   }
   
   });
-/////////// A D M I N - C O M M A N D S [PREFIX DOESN'T WORK HERE !!!!!!!!!!!!!!!!!!]/
+  /////////// A D M I N - C O M M A N D S [PREFIX DOESN'T WORK HERE !!!!!!!!!!!!!!!!!!]/
 
 
 /////////// G U I L D - C O M M A N D S /////////////////////////////
