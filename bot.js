@@ -532,7 +532,7 @@ message.author.sendEmbed(embed);
                         message.reply('**مشالله عليك اسرع واحد**');
                     }
                   
-                    if (msg.content === 'شفتك شفتني ماشفتك ') {
+                    if (message.content === 'شفتك شفتني ماشفتك ') {
                         message.reply('**مشالله عليك اسرع واحد**');
                     }
 
@@ -549,7 +549,7 @@ message.author.sendEmbed(embed);
                     }
                   
                   
-                    if (msg.content === 'فراش فراس مفروش') {
+                    if (message.content === 'فراش فراس مفروش') {
                         message.reply('**مشالله عليك اسرع واحد تستحق فلوس امزح**');
                     }
                   
