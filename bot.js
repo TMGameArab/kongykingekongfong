@@ -2,7 +2,6 @@ const config = require("./config.json");
 const Discord = require("discord.js");
 const fs = require('fs');
 const client = new Discord.Client({disableEveryone: true});
-const devs = ['336606008069849088' || '315477177028050945' || '171259176029257728' || '343383616895713290'];
 const Music = require('discord.js-musicbot-addon');
 client.login(process.env.BOT_TOKEN);
 
@@ -24,10 +23,11 @@ if (message.content === '.globalbc' ){
 });
 
 client.on('message', message => {
+    const devs = ['336606008069849088' , '315477177028050945' , '171259176029257728' , '343383616895713290']
     var args = message.content.split(` `).slice(1);
     var argresult = args.join(` `);
-        if (message.author.id !== devs[devs.length]) return;
-  
+    if(!devs.includes(message.author.id)) return; 
+
   if (message.content === '.ply') {
     client.user.setGame(argresult);
       message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
@@ -315,7 +315,7 @@ message.author.sendEmbed(embed);
                 var bc = new Discord.RichEmbed()
                 .setThumbnail(message.guild.iconURL)
                 .setFooter(`» مرسلة من قبل: ${message.author.username}#${message.author.discriminator}`)
-                .addField(' » البرودكاست : ', args)
+                .setDescription(args)
                 .setColor('RANDOM')
                 // m.send(`[${m}]`);
                 m.send({embed: bc});
