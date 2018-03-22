@@ -492,4 +492,65 @@ message.author.sendEmbed(embed);
 //////////////////////////////////////////
  });
  /////////////////////////////////////////////////////
-////////////////// C O M M A N D S //////////////////
+////////////////// GaMES MOTHERZZ //////////////////
+var kingscc =["https://cdn.discordapp.com/attachments/419823645280436224/423563689954902016/unknown.png","https://cdn.discordapp.com/attachments/419823645280436224/423563233723547658/unknown.png","https://cdn.discordapp.com/attachments/419823645280436224/423562874850508804/unknown.png","https://cdn.discordapp.com/attachments/419823645280436224/423562665026125845/unknown.png","https://cdn.discordapp.com/attachments/419823645280436224/423562493726687253/unknown.png","https://cdn.discordapp.com/attachments/419823645280436224/423562319826518028/unknown.png","https://cdn.discordapp.com/attachments/419823645280436224/423562059167563778/unknown.png","https://cdn.discordapp.com/attachments/419823645280436224/423561747195101186/unknown.png"]
+client.on('message', message => {
+    var args = message.content.split(" ").slice(1);         
+if(message.content.startsWith(prefix + 'لغز')) {
+     var embed = new Discord.RichEmbed()
+.setImage(kingscc[Math.floor(Math.random() * kingscc.length)])
+message.channel.sendEmbed(embed);
+}
+});
+
+client.on('message', msg => {
+    if (msg.content === 'السان') {
+      msg.reply('**اجابه صحيحه**');
+    }
+  });
+  
+  client.on('message', msg => {
+    if (msg.content === 'الباب المفتوح') {
+      msg.reply('**اجابه صحيحه**');
+    }
+  });
+  
+  
+  client.on('message', msg => {
+    if (msg.content === 'حرف الواو') {
+      msg.reply('**اجابه صحيحه**');
+    }
+  });
+  
+  
+  
+  client.on('message', msg => {
+    if (msg.content === 'الواو') {
+      msg.reply('**اجابه صحيحه**');
+    }
+  });
+  
+  
+  
+  client.on('message', msg => {
+    if (msg.content === 'البصل') {
+      msg.reply('**اجابه صحيحه**');
+    }
+  });
+  
+  
+  
+  
+  client.on('message', msg => {
+    if (msg.content === 'البيض') {
+      msg.reply('**اجابه صحيحه**');
+    }
+  });
+  
+  
+  
+  client.on('message', msg => {
+    if (msg.content === 'البيضه') {
+      msg.reply('**اجابه صحيحه**');
+    }
+  });
