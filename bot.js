@@ -495,28 +495,28 @@ message.author.sendEmbed(embed);
                 message.channel.sendEmbed(embed);
                 }
                 
-                    if (msg.content === 'السان') {
-                      msg.reply('**اجابه صحيحه**');
+                    if (message.content === 'السان') {
+                        message.reply('**اجابه صحيحه**');
                     }
-                    if (msg.content === 'الباب المفتوح') {
-                      msg.reply('**اجابه صحيحه**');
+                    if (message.content === 'الباب المفتوح') {
+                        message.reply('**اجابه صحيحه**');
                     }
-                    if (msg.content === 'حرف الواو') {
-                      msg.reply('**اجابه صحيحه**');
+                    if (message.content === 'حرف الواو') {
+                        message.reply('**اجابه صحيحه**');
                     }
-                    if (msg.content === 'الواو') {
-                      msg.reply('**اجابه صحيحه**');
+                    if (message.content === 'الواو') {
+                        message.reply('**اجابه صحيحه**');
                     }
-                    if (msg.content === 'البصل') {
-                      msg.reply('**اجابه صحيحه**');
+                    if (message.content === 'البصل') {
+                        message.reply('**اجابه صحيحه**');
                     }
-                    if (msg.content === 'البيض') {
-                      msg.reply('**اجابه صحيحه**');
+                    if (message.content === 'البيض') {
+                        message.reply('**اجابه صحيحه**');
                     }
-                    if (msg.content === 'البيضه') {
-                      msg.reply('**اجابه صحيحه**');
+                    if (message.content === 'البيضه') {
+                        message.reply('**اجابه صحيحه**');
                     }
                 //////////////////////////////////////////
  });
  /////////////////////////////////////////////////////
-////////////////// GaMES MOTHERZZ //////////////////
+////////////////////////////////////
