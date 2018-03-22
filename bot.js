@@ -597,6 +597,20 @@ message.author.sendEmbed(embed);
                     if (message.content === '‏أكلت قفص بصل ومصيت قفص قصب') {
                         message.reply('**مشالله عليك اسرع واحد تستحق فلوس امزح**');
                     }
-//////////////////////////////////////////
- });
+
+
+
+
+
+                        if(message.content === prefix + "listemojis") {
+                          const emojiList = message.guild.emojis.map(e=>e.toString()).join(" ");
+                          message.channel.send(emojiList);
+                        }
+                      
+
+
+
+/////////////////////////////////////////
+
+});
  
