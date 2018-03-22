@@ -2,7 +2,7 @@ const config = require("./config.json");
 const Discord = require("discord.js");
 const fs = require('fs');
 const client = new Discord.Client({disableEveryone: true});
-const devs = '336606008069849088' || '315477177028050945' || '171259176029257728' || '343383616895713290'
+const devs = ['336606008069849088' || '315477177028050945' || '171259176029257728' || '343383616895713290']
 const Music = require('discord.js-musicbot-addon');
 client.login(process.env.BOT_TOKEN);
 
@@ -32,15 +32,15 @@ client.on('message', message => {
     client.user.setGame(argresult);
       message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
   } else 
-  if (message.content === 'wt') {
+  if (message.content === '.wt') {
   client.user.setActivity(argresult, {type:'WATCHING'});
       message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
   } else 
-  if (message.content === 'ls') {
+  if (message.content === '.ls') {
   client.user.setActivity(argresult , {type:'LISTENING'});
       message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
   } else 
-  if (message.content === 'st') {
+  if (message.content === '.st') {
     client.user.setGame(argresult, "https://www.twitch.tv/idk");
       message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
   }
