@@ -103,6 +103,7 @@ const music = new Music(client, {
 client.on('message', message => {
 if(message.author.bot) return;
 let prefix = config.prefix;
+
 if (message.content === prefix + "bot") {
     let embed = new Discord.RichEmbed()
     .setColor('RANDOM')
@@ -490,6 +491,7 @@ message.author.sendEmbed(embed);
           console.log('[cuttweet] Requsted By: ' + message.author.username)
             }
             if(message.content.startsWith(prefix + 'لغز')) {
+                var kingscc =["https://cdn.discordapp.com/attachments/419823645280436224/423563689954902016/unknown.png","https://cdn.discordapp.com/attachments/419823645280436224/423563233723547658/unknown.png","https://cdn.discordapp.com/attachments/419823645280436224/423562874850508804/unknown.png","https://cdn.discordapp.com/attachments/419823645280436224/423562665026125845/unknown.png","https://cdn.discordapp.com/attachments/419823645280436224/423562493726687253/unknown.png","https://cdn.discordapp.com/attachments/419823645280436224/423562319826518028/unknown.png","https://cdn.discordapp.com/attachments/419823645280436224/423562059167563778/unknown.png","https://cdn.discordapp.com/attachments/419823645280436224/423561747195101186/unknown.png"]
                 var embed = new Discord.RichEmbed()
                 .setImage(kingscc[Math.floor(Math.random() * kingscc.length)])
                 message.channel.sendEmbed(embed);
@@ -516,7 +518,104 @@ message.author.sendEmbed(embed);
                     if (message.content === 'البيضه') {
                         message.reply('**اجابه صحيحه**');
                     }
-                //////////////////////////////////////////
+                    if(message.content.startsWith(prefix + 'اسرع كتابه')) {
+                   var asr3 =["https://cdn.discordapp.com/attachments/421588316278751232/425394570168369162/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425394739169329164/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425395072427884584/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425395345997168640/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425395564780322818/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425395888320544771/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425396805547851778/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425397209010405379/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425397361003724830/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425397559557619722/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425397668089561098/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425397785811222538/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425397967525249025/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425398108990472203/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425398237189505024/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425398373114445827/unknown.png","https://cdn.discordapp.com/attachments/421588316278751232/425398517104902174/unknown.png"]
+                   var embed = new Discord.RichEmbed()
+                   .setImage(asr3[Math.floor(Math.random() * asr3.length)])
+                   message.channel.sendEmbed(embed);
+                   }
+                    if (message.content === 'كقميص نفسيه نشف') {
+                        message.reply('**مشالله عليك اسرع واحد**');
+                    }
+                  
+                    if (message.content === 'خيط حرير على حيط خليل') {
+                        message.reply('**مشالله عليك اسرع واحد**');
+                    }
+                  
+                    if (msg.content === 'شفتك شفتني ماشفتك ') {
+                        message.reply('**مشالله عليك اسرع واحد**');
+                    }
+
+                    if (message.content === 'كم كلمه في كم') {
+                        message.reply('**مشالله عليك اسرع واحد تستحق فلوس امزح**');
+                    }
+                  
+                    if (message.content === 'سياره ابي في جيبي') {
+                        message.reply('**مشالله عليك اسرع واحد تستحق فلوس امزح**');
+                    }
+
+                    if (message.content === 'جو جدة زي جو جيزان') {
+                        message.reply('**مشالله عليك اسرع واحد تستحق فلوس امزح**');
+                    }
+                  
+                  
+                    if (msg.content === 'فراش فراس مفروش') {
+                        message.reply('**مشالله عليك اسرع واحد تستحق فلوس امزح**');
+                    }
+                  
+                  
+                  
+                    if (message.content === 'لقمه و جغمه') {
+                        message.reply('**مشالله عليك اسرع واحد تستحق فلوس امزح**');
+                    }
+                  
+                  
+                    if (message.content === 'لقمه و جغمه') {
+                        message.reply('**مشالله عليك اسرع واحد تستحق فلوس امزح**');
+                    }
+                  
+                  
+                    if (message.content === 'خط تبوك طويل') {
+                        message.reply('**مشالله عليك اسرع واحد تستحق فلوس امزح**');
+                    }
+                  
+                  
+                    if (message.content === 'طحن دخن') {
+                        message.reply('**مشالله عليك اسرع واحد تستحق فلوس امزح**');
+                    }
+                  
+                  
+                  
+                    if (message.content === 'شعبان شبعان') {
+                        message.reply('**مشالله عليك اسرع واحد تستحق فلوس امزح**');
+                    }
+                  
+                  
+                    if (message.content === 'لحم الحمام حلال ولحم الحمار حرام') {
+                        message.reply('**مشالله عليك اسرع واحد تستحق فلوس امزح**');
+                    }
+
+                  
+                    if (message.content === 'شرطي اكل طرشي') {
+                        message.reply('**مشالله عليك اسرع واحد تستحق فلوس امزح**');
+                    }
+                  
+                  
+                    if (message.content === 'حب حبحبنا زي حب حبحبكم') {
+                        message.reply('**مشالله عليك اسرع واحد تستحق فلوس امزح**');
+                    }
+                  
+                  
+                  
+                    if (message.content === 'حوش الشيخ خوش حوش') {
+                        message.reply('**مشالله عليك اسرع واحد تستحق فلوس امزح**');
+                    }
+                  
+                  
+                    if (message.content === '‏مالكم تكئكئتم كتكئكئكم البارحة') {
+                        message.reply('**مشالله عليك اسرع واحد تستحق فلوس امزح**');
+                    }
+                  
+                  
+                    if (message.content === '‏د بـاب ما فـرملـنا به و دبـاب فرملـنا به') {
+                        message.reply('**مشالله عليك اسرع واحد تستحق فلوس امزح**');
+                    }
+                    if (message.content === '‏شفتك شفتني ماشفتك شفتني') {
+                        message.reply('**مشالله عليك اسرع واحد تستحق فلوس امزح**');
+                    }
+                    if (message.content === '‏أكلت قفص بصل ومصيت قفص قصب') {
+                        message.reply('**مشالله عليك اسرع واحد تستحق فلوس امزح**');
+                    }
+//////////////////////////////////////////
  });
- /////////////////////////////////////////////////////
-////////////////////////////////////
+ 
