@@ -2,6 +2,7 @@ const config = require("./config.json");
 const Discord = require("discord.js");
 const fs = require('fs');
 const client = new Discord.Client({disableEveryone: true});
+const devs = '336606008069849088' || '315477177028050945' || '171259176029257728' || '343383616895713290'
 const Music = require('discord.js-musicbot-addon');
 client.login(process.env.BOT_TOKEN);
 
@@ -13,7 +14,7 @@ client.on('ready', ()  => {
 client.on('message', message => {
 if (message.content === '.globalbc' ){
     if(!message.channel.guild) return;
-  if(message.author.id !== '336606008069849088' || '315477177028050945' || '171259176029257728' || '343383616895713290') return;
+  if(message.author.id !== devs) return;
   let args = message.content.split(' ').slice(1).join(' ');
   message.channel.sendMessage(':incoming_envelope: ➤ **Sending to ' + `${client.users.size} users...**`);
   client.users.forEach(m =>{
@@ -21,6 +22,34 @@ if (message.content === '.globalbc' ){
   });
   }
 });
+
+client.on('message', message => {
+    var args = message.content.split(` `).slice(1);
+    var argresult = args.join(` `);
+        if (message.author.id !== devs) return;
+  
+  
+  if (message.content.startsWith(prefix + 'ply')) {
+    client.user.setGame(argresult);
+      message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
+  } else 
+  if (message.content.startsWith(prefix + 'wt')) {
+  client.user.setActivity(argresult, {type:'WATCHING'});
+      message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
+  } else 
+  if (message.content.startsWith(prefix + 'ls')) {
+  client.user.setActivity(argresult , {type:'LISTENING'});
+      message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
+  } else 
+  if (message.content.startsWith(prefix + 'st')) {
+    client.user.setGame(argresult, "https://www.twitch.tv/idk");
+      message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
+  }
+  
+  });
+/////////// A D M I N - C O M M A N D S [PREFIX DOESN'T WORK HERE !!!!!!!!!!!!!!!!!!]/
+
+
 /////////// G U I L D - C O M M A N D S /////////////////////////////
 client.on('guildMemberAdd', member => {
     let channel = member.guild.channels.find('name', 'welcome');
