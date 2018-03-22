@@ -25,7 +25,7 @@ let args = message.content.split(' ').slice(1).join(' ');
 
 client.on('message', message => {
     if(!devs.includes(message.author.id)) return; 
-    var args = message.content.split(` `).slice(1);
+    var args = message.content.split(` `).slice(0);
     var argresult = args.join(` `);
   if (message.content === '.ply') {
     client.user.setGame(argresult);
