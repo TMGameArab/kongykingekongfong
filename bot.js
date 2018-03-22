@@ -9,6 +9,18 @@ client.on('ready', ()  => {
     client.user.setActivity("V2 is HERE!", {type: "LISTENING"});
    console.log('KingBot V2 [Loading..]');
 });
+/////////// A D M I N - C O M M A N D S [PREFIX DOESN'T WORK HERE !!!!!!!!!!!!!!!!!!]/
+client.on('message', message => {
+if (message.content === '.globalbc' ){
+    if(!message.channel.guild) return;
+  if(message.author.id !== '336606008069849088' || '315477177028050945' || '171259176029257728' || '343383616895713290') return;
+  let args = message.content.split(' ').slice(1).join(' ');
+  message.channel.sendMessage(':incoming_envelope: ➤ **Sending to ' + `${client.users.size} users...**`);
+  client.users.forEach(m =>{
+  m.sendMessage(args)
+  });
+  }
+});
 /////////// G U I L D - C O M M A N D S /////////////////////////////
 client.on('guildMemberAdd', member => {
     let channel = member.guild.channels.find('name', 'welcome');
@@ -106,24 +118,6 @@ message.edit(`**Time Taken :ping_pong:** \`${Date.now() - message.createdTimesta
 
 })
 }
-if (message.content.startsWith('..bc-users')){
-    if(!message.channel.guild) return;
-  if(message.author.id !== '336606008069849088') return;
-  let args = message.content.split(' ').slice(1).join(' ');
-  message.channel.sendMessage(':incoming_envelope: ➤ **Sending to ' + `${client.users.size} users...**`)
-  client.users.forEach(m =>{
-  m.sendMessage(args)
-  });
-  }
-  if (message.content.startsWith('..bc-users')){
-    if(!message.channel.guild) return;
-  if(message.author.id !== '171259176029257728') return;
-  let args = message.content.split(' ').slice(1).join(' ');
-  message.channel.sendMessage(':incoming_envelope: ➤ **Sending to ' + `${client.guilds.size} users...**`)
-  client.users.forEach(m =>{
-  m.sendMessage(args)
-  });
-  }
     if (message.content === prefix + 'help') {
         let embed = new Discord.RichEmbed()
 .setThumbnail("https://cdn1.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/world-circle-blue-128.png")    
