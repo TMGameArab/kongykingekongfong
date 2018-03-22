@@ -12,7 +12,7 @@ client.on('ready', ()  => {
 });
 /////////// A D M I N - C O M M A N D S [PREFIX DOESN'T WORK HERE !!!!!!!!!!!!!!!!!!]/
 client.on('message', message => {
-if (message.content === '.globalbc' ){
+if (message.content === '.' + 'globalbc' ){
 if(!message.channel.guild) return;
 if(!devs.includes(message.author.id)) return; 
 let args = message.content.split(' ').slice(1).join(' ');
@@ -22,24 +22,23 @@ let args = message.content.split(' ').slice(1).join(' ');
   });
   }
 });
-
 client.on('message', message => {
     if(!devs.includes(message.author.id)) return; 
-    var args = message.content.split(` `).slice(0);
+    var args = message.content.split(` `).slice(1);
     var argresult = args.join(` `);
-  if (message.content === '.ply') {
+  if (message.content === '.' + 'ply') {
     client.user.setGame(argresult);
       message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
   } else 
-  if (message.content === '.wt') {
+  if (message.content === '.' + 'wt') {
   client.user.setActivity(argresult, {type:'WATCHING'});
       message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
   } else 
-  if (message.content === '.ls') {
+  if (message.content === '.' + '.ls') {
   client.user.setActivity(argresult , {type:'LISTENING'});
       message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
   } else 
-  if (message.content === '.st') {
+  if (message.content === '.' + '.st') {
     client.user.setGame(argresult, "https://www.twitch.tv/idk");
       message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
   }
