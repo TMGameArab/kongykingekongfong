@@ -25,15 +25,15 @@ let args = message.content.split(' ').slice(1).join(' ');
 });
 
 client.on('message', message => {
-    var argresult = message.content.split(` `).join(' ');
+    var argresult = message.content.split(` `).slice(1).join(' ');
       if (!devs.includes(message.author.id)) return;
       
   if (message.content.startsWith(adminprefix + 'ply')) {
-    client.user.setGame(argresult[0]);
+    client.user.setGame(argresult);
       message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
   } else 
   if (message.content.startsWith(adminprefix + 'wt')) {
-  client.user.setActivity(argresult[0] , {type:'WATCHING'});
+  client.user.setActivity(argresult, {type:'WATCHING'});
       message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
   } else 
   if (message.content.startsWith(adminprefix + 'ls')) {
